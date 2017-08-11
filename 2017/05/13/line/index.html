@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="1､lineCap 属性lineCap 属性设置或返回线条末端线帽的样式。注意：”round” 和 “square” 值会使线条略微变长。butt 默认。向线条的每个末端添加平直的边缘。round 向线条的每个末端添加圆形线帽。square  向线条的每个末端添加正方形线帽。   //butt  ctx.lineWidth = 10;  ctx.beginPath();  ctx.lineCap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Canvas 线性">
+<meta property="og:url" content="http:socat.cc/2017/05/13/line/index.html">
+<meta property="og:site_name" content="socat">
+<meta property="og:description" content="1､lineCap 属性lineCap 属性设置或返回线条末端线帽的样式。注意：”round” 和 “square” 值会使线条略微变长。butt 默认。向线条的每个末端添加平直的边缘。round 向线条的每个末端添加圆形线帽。square  向线条的每个末端添加正方形线帽。   //butt  ctx.lineWidth = 10;  ctx.beginPath();  ctx.lineCap">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://oo6ltjdyl.bkt.clouddn.com/2345.jpg">
+<meta property="og:image" content="http://oo6ltjdyl.bkt.clouddn.com/23456.jpg">
+<meta property="og:image" content="http://oo6ltjdyl.bkt.clouddn.com/13456.png">
+<meta property="og:image" content="http://oo6ltjdyl.bkt.clouddn.com/img_miterlimitFig.gif">
+<meta property="og:image" content="http://oo6ltjdyl.bkt.clouddn.com/img_miterlimitBevelFig.gif">
+<meta property="og:updated_time" content="2017-06-30T07:56:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Canvas 线性">
+<meta name="twitter:description" content="1､lineCap 属性lineCap 属性设置或返回线条末端线帽的样式。注意：”round” 和 “square” 值会使线条略微变长。butt 默认。向线条的每个末端添加平直的边缘。round 向线条的每个末端添加圆形线帽。square  向线条的每个末端添加正方形线帽。   //butt  ctx.lineWidth = 10;  ctx.beginPath();  ctx.lineCap">
+<meta name="twitter:image" content="http://oo6ltjdyl.bkt.clouddn.com/2345.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http:socat.cc/2017/05/13/line/"/>
+
+
+
+
+
+  <title>Canvas 线性 | socat</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">socat</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http:socat.cc/2017/05/13/line/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="socat">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="socat">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Canvas 线性</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-13T00:00:00+08:00">
+                2017-05-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/canvas/" itemprop="url" rel="index">
+                    <span itemprop="name">canvas</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><span style="font-size:16px;font-weigh:bold;">1､lineCap 属性</span><br>lineCap 属性设置或返回线条末端线帽的样式。<br>注意：”round” 和 “square” 值会使线条略微变长。<br>butt 默认。向线条的每个末端添加平直的边缘。<br>round 向线条的每个末端添加圆形线帽。<br>square  向线条的每个末端添加正方形线帽。</p>
+<p><blockquote><pre><code><br>  <span>//butt</span><br>  <span>ctx.lineWidth = 10;</span><br>  <span>ctx.beginPath();</span><br>  <span>ctx.lineCap = ‘butt’;</span><br>  <span>ctx.moveTo(60, 30);</span><br>  <span>ctx.lineTo(200, 30);</span><br>  <span>ctx.fillText(‘butt’, 10, 35);</span><br>  <span>ctx.stroke();</span><br>  <span>//round</span><br>  <span>ctx.lineWidth = 10;</span><br>  <span>ctx.beginPath();</span><br>  <span>ctx.lineCap = ‘round’;</span><br>  <span>ctx.moveTo(60, 60);</span><br>  <span>ctx.lineTo(200, 60);</span><br>  <span>ctx.fillText(‘round’, 10, 65);</span><br>  <span>ctx.stroke();</span><br>  <span>//square</span><br>  <span>ctx.lineWidth = 10;</span><br>  <span>ctx.beginPath();</span><br>  <span>ctx.lineCap = ‘square’;</span><br>  <span>ctx.moveTo(60, 90);</span><br>  <span>ctx.lineTo(200, 90);</span><br>  <span>ctx.fillText(‘square’, 10, 95);</span><br>  <span> ctx.stroke();</span><br></code></pre></blockquote><br><img src="http://oo6ltjdyl.bkt.clouddn.com/2345.jpg" alt=""><br><span style="font-size:16px;font-weigh:bold;">2､lineJoin 属性</span><br>lineJoin 属性设置或返回所创建边角的类型，当两条线交汇时。<br>注意：”miter” 值受 miterLimit 属性的影响。<br>bevel 创建斜角。<br>round 创建圆角。<br>miter 默认。创建尖角。</p>
+<p><blockquote><pre><code><br>  <span>//miter</span><br>  <span>ctx.lineWidth = 10;</span><br>  <span>ctx.beginPath();</span><br>  <span>ctx.lineJoin = ‘miter’;</span><br>  <span>ctx.moveTo(60, 30);</span><br>  <span>ctx.lineTo(100, 30);</span><br>  <span>ctx.lineTo(100, 100);</span><br>  <span>ctx.fillText(‘miter’, 10, 35);</span><br>  <span>ctx.stroke();</span><br>  <span>//round</span><br>  <span>ctx.lineWidth = 10;</span><br>  <span>ctx.beginPath();</span><br>  <span>ctx.lineJoin = ‘round’;</span><br>  <span>ctx.moveTo(160, 30);</span><br>  <span>ctx.lineTo(200, 30);</span><br>  <span>ctx.lineTo(200, 100);</span><br>  <span>ctx.fillText(‘round’, 120, 35);</span><br>  <span>ctx.stroke();</span><br>  <span>//bevel</span><br>  <span>ctx.lineWidth = 10;</span><br>  <span>ctx.beginPath();</span><br>  <span>ctx.lineJoin = ‘bevel’;</span><br>  <span>ctx.moveTo(260, 30);</span><br>  <span>ctx.lineTo(300, 30);</span><br>  <span>ctx.lineTo(300, 100);</span><br>  <span>ctx.fillText(‘bevel’, 220, 35);</span><br>  <span>ctx.stroke();</span><br></code></pre></blockquote><br><img src="http://oo6ltjdyl.bkt.clouddn.com/23456.jpg" alt=""><br><span style="font-size:16px;font-weigh:bold;">3､lineWidth 属性</span><br>lineWidth 属性设置或返回当前线条的宽度，以像素计。<br>线宽是指给定路径的中心到两边的粗细。就是在路径的两边各绘制线宽的一半。<br>在Canvas中绘制1个像素的线条时，坐标位置需要错开0.5个像素。<br>在Canvas中绘制路径（线段）时，后面显式设置的lineWidth会覆盖前面的值。<br><span style="font-size:16px;font-weigh:bold;">4､miterLimit 属性</span><br>默认值：10, number 正数。规定最大斜接长度。如果斜接长度超过 miterLimit 的值，边角会以 lineJoin 的 “bevel” 类型来显示。以最大斜接长度 5 绘制线条：</p>
+<p><blockquote><pre><code><br>  <span>ctx.lineWidth=10;</span><br>  <span>ctx.lineJoin=”miter”;</span><br>  <span>ctx.miterLimit=5;</span><br>  <span>ctx.moveTo(20,20);</span><br>  <span>ctx.lineTo(50,27);</span><br>  <span>ctx.lineTo(20,34);</span><br>  <span>ctx.stroke();</span><br></code></pre></blockquote><br><img src="http://oo6ltjdyl.bkt.clouddn.com/13456.png" alt=""><br>miterLimit 属性设置或返回最大斜接长度。<br>斜接长度指的是在两条线交汇处内角和外角之间的距离。<br><img src="http://oo6ltjdyl.bkt.clouddn.com/img_miterlimitFig.gif" alt=""><br>提示：只有当 lineJoin 属性为 “miter” 时，miterLimit 才有效。<br>边角的角度越小，斜接长度就会越大。<br>为了避免斜接长度过长，我们可以使用 miterLimit 属性。<br>如果斜接长度超过 miterLimit 的值，边角会以 lineJoin 的 “bevel” 类型来显示（Fig 3）<br><img src="http://oo6ltjdyl.bkt.clouddn.com/img_miterlimitBevelFig.gif" alt=""></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/23/mls/" rel="next" title="每一次的马拉松，只为更好的自己">
+                <i class="fa fa-chevron-left"></i> 每一次的马拉松，只为更好的自己
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/19/arc/" rel="prev" title="Canvas 圆形">
+                Canvas 圆形 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="socat" />
+          <p class="site-author-name" itemprop="name">socat</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">socat</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
