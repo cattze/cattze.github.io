@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="一、作用域作用域就是变量和函数的可访问范围，控制着变量和函数的可见性与生命周期，在JavaScript中变量的作用域有全局作用域和局部作用域。JavaScript并没有块及的作用域，只有函数级作用域：变量在声明它们的函数体及其子函数内是可见的。变量没有在函数内声明或者声明的时候没有带var就是全局变量，拥有全局作用域，window对象的所有属性拥有全局作用域；在代码任何地方都可以访问，函数内部声明">
+<meta name="description" content="ECharts，一个纯 Javascript 的图表库，依赖轻量级的 Canvas 类库 ZRender，提供直观，生动，可交互，可高度个性化定制的数据可视化图表。通过 npm 获取 echarts，npm install echarts –save。 常用的组件：1､ title: 标题组件，包含主标题和副标题。 title: {  text: 标题  show: 是否显示组件  textSty">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript Scope 作用域和作用域链">
-<meta property="og:url" content="http:socat.cc/2016/09/09/js-scope/index.html">
+<meta property="og:title" content="Echarts的用法">
+<meta property="og:url" content="http:socat.cc/2017/07/10/echarts/index.html">
 <meta property="og:site_name" content="socat">
-<meta property="og:description" content="一、作用域作用域就是变量和函数的可访问范围，控制着变量和函数的可见性与生命周期，在JavaScript中变量的作用域有全局作用域和局部作用域。JavaScript并没有块及的作用域，只有函数级作用域：变量在声明它们的函数体及其子函数内是可见的。变量没有在函数内声明或者声明的时候没有带var就是全局变量，拥有全局作用域，window对象的所有属性拥有全局作用域；在代码任何地方都可以访问，函数内部声明">
+<meta property="og:description" content="ECharts，一个纯 Javascript 的图表库，依赖轻量级的 Canvas 类库 ZRender，提供直观，生动，可交互，可高度个性化定制的数据可视化图表。通过 npm 获取 echarts，npm install echarts –save。 常用的组件：1､ title: 标题组件，包含主标题和副标题。 title: {  text: 标题  show: 是否显示组件  textSty">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-06-23T02:57:48.000Z">
+<meta property="og:updated_time" content="2017-08-25T03:45:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript Scope 作用域和作用域链">
-<meta name="twitter:description" content="一、作用域作用域就是变量和函数的可访问范围，控制着变量和函数的可见性与生命周期，在JavaScript中变量的作用域有全局作用域和局部作用域。JavaScript并没有块及的作用域，只有函数级作用域：变量在声明它们的函数体及其子函数内是可见的。变量没有在函数内声明或者声明的时候没有带var就是全局变量，拥有全局作用域，window对象的所有属性拥有全局作用域；在代码任何地方都可以访问，函数内部声明">
+<meta name="twitter:title" content="Echarts的用法">
+<meta name="twitter:description" content="ECharts，一个纯 Javascript 的图表库，依赖轻量级的 Canvas 类库 ZRender，提供直观，生动，可交互，可高度个性化定制的数据可视化图表。通过 npm 获取 echarts，npm install echarts –save。 常用的组件：1､ title: 标题组件，包含主标题和副标题。 title: {  text: 标题  show: 是否显示组件  textSty">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http:socat.cc/2016/09/09/js-scope/"/>
+  <link rel="canonical" href="http:socat.cc/2017/07/10/echarts/"/>
 
 
 
 
 
-  <title> JavaScript Scope 作用域和作用域链 | socat </title>
+  <title> Echarts的用法 | socat </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -256,7 +256,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http:socat.cc/2016/09/09/js-scope/">
+    <link itemprop="mainEntityOfPage" href="http:socat.cc/2017/07/10/echarts/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="socat">
@@ -277,7 +277,7 @@
             
             
               
-                JavaScript Scope 作用域和作用域链
+                Echarts的用法
               
             
           </h1>
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-09T00:00:00+08:00">
-                2016-09-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-10T00:00:00+08:00">
+                2017-07-10
               </time>
             
 
@@ -350,12 +350,9 @@
       
 
       
-        <p>一、作用域<br>作用域就是变量和函数的可访问范围，控制着变量和函数的可见性与生命周期，在JavaScript中变量的作用域有全局作用域和局部作用域。<br>JavaScript并没有块及的作用域，只有函数级作用域：变量在声明它们的函数体及其子函数内是可见的。<br>变量没有在函数内声明或者声明的时候没有带var就是全局变量，拥有全局作用域，window对象的所有属性拥有全局作用域；在代码任何地方都可以访问，函数内部声明并且以var修饰的变量就是局部变量，只能在函数体内使用，函数的参数虽然没有使用var但仍然是局部变量。<br><span style="font-size:16px;font-weight:bold;">1､全局作用域（Global Scope）</span><br>在代码中任何地方都能访问到的对象拥有全局作用域。<br>（1）最外层函数和在最外层函数外面定义的变量拥有全局作用域</p>
-<p><blockquote><pre><code><span>var a = 3;</span><br><span>function Fn(){</span><br>  <span>var b = 4;</span><br>  <span>function subFn(){</span><br>    <span>console.log(b);</span><br>  <span>};</span><br>  <span>subFn();</span><br><span>}</span><br><span>console.log(a); //3</span><br><span>console.log(typeof b); //undefined 使用typeof b，是因为对于没有定义的变量，浏览器会抛出错误，并且阻塞浏览器继续执行后续代码的。</span><br><span>Fn(); //4</span><br><span>subFn(); //报错</span></code></pre></blockquote><br>（2）所有末定义直接赋值的变量自动声明为拥有全局作用域</p>
-<p><blockquote><pre><code><span>function Fn(){</span><br>  <span>var a = 3;</span><br>  <span>b = 4;</span><br>  <span>console.log(a);</span><br><span>}</span><br><span>Fn(); //3</span><br><span>console.log(b); //4</span><br><span>console.log(a); //报错</span></code></pre></blockquote><br>（3）所有window对象的属性拥有全局作用域<br>一般情况下，window对象的内置属性都拥有全局作用域，例如window.name、window.location、window.top等等。<br><span style="font-size:16px;font-weight:bold;">2､局部作用域（Local Scope）</span>　<br>和全局作用域相反，局部作用域一般只在固定的代码片段内可访问到，最常见的例如函数内部，所有在一些地方也会看到有人把这种作用域称为函数作用域。</p>
-<p><blockquote><pre><code><span>function Fn(){</span><br>  <span>var b = 3;</span><br>  <span>function subFn(){</span><br>    <span>console.log(b);</span><br>  <span>}</span><br>  <span>subFn();</span><br><span>}</span><br><span>console.log(typeof b); //undefined</span><br><span>subFn() //报错</span></code></pre></blockquote><br>二、作用域链<br>在JavaScript中，函数也是对象，实际上，JavaScript里一切都是对象。函数对象和其它对象一样，拥有可以通过代码访问的属性和一系列仅供JavaScript引擎访问的内部属性。其中一个内部属性是[[Scope]]，该内部属性包含了函数被创建的作用域中对象的集合，这个集合被称为函数的作用域链，它决定了哪些数据能被函数访问。<br>当一个函数创建后，它实际上保存一个作用域链，并且作用域链会被创建此函数的作用域中可访问的数据对象填充。</p>
-<p><blockquote><pre><code><span>name=”a”; </span><br><span>function test(){</span><br>  <span>var name=”b”;</span><br>  <span>function local1(){</span><br>    <span>var name=”c”;</span><br>    <span>console.log(name); </span><br>  <span>}</span><br>  <span>function local2(){ </span><br>    <span>console.log(name); </span><br>  <span>}</span><br>  <span>local1(); </span><br>  <span>local2(); </span><br><span>} </span><br><span>test(); </span></code></pre></blockquote><br>当执行local1()时，将创建函数local1的执行环境(调用对象),并将该对象置于作用域链开头，然后将函数test的调用对象链接在之后，最后是全局对象。然后从链开头寻找变量name,<br>很明显作用域链是： local1()-&gt;test()-&gt;window,所以name是”a”<br>但执行local2()时，作用域链是： local2()-&gt;test()-&gt;window,所以name是”b”</p>
-
+        <p>ECharts，一个纯 Javascript 的图表库，依赖轻量级的 Canvas 类库 ZRender，提供直观，生动，可交互，可高度个性化定制的数据可视化图表。<br>通过 npm 获取 echarts，npm install echarts –save。</p>
+<p>常用的组件：<br>1､ title: 标题组件，包含主标题和副标题。</p>
+<blockquote><pre><code><span>title: {</span><br>  <span>text: 标题</span><br>  <span>show: 是否显示组件</span><br>  <span>textStyle: { … } 标题文字的样式</span><br>  <span>subtext: 副标题文本，支持使用 \n 换行</span><br>  <span>subtextStyle: { … } 副标题文字的样式</span><br><span>}</span></code></pre></blockquote><br>2､ legend: 展现了不同系列的标记(symbol)，颜色和名字。<br><blockquote><pre><code><span>legend: {</span><br>  <span>type: ‘plain’普通图例 ／ ‘scroll’可滚动翻页的图例</span><br>  <span>show: 是否显示组件</span><br>  <span>orient: ‘horizontal’水平 / ‘vertical’垂直</span><br>  <span>textStyle: { … } 公用文本样式</span><br>  <span>data: [{ name: ‘系列1’, // 强制设置图形为圆。 icon: ‘circle’, // 设置文本为红色 textStyle: { color: ‘red’ } }]</span><br>  <span>//数据数组。数组项通常为一个字符串，每一项代表一个系列的 name（如果是饼图，也可以是饼图单个数据的 name）。图例组件会自动根据对应系列的图形标记（symbol）来绘制自己的颜色和标记，特殊字符串 ‘’（空字符串）或者 ‘\n’（换行字符串）用于图例的换行</span><br><span>}</span></code></pre></blockquote><br>3､ grid: 直角坐标系内绘图网格。单个 grid 内最多可以放置上下两个 X 轴，左右两个 Y 轴。可以在网格上绘制折线图，柱状图，散点图（气泡图）。<br><blockquote><pre><code><span>grid: {</span><br>  <span>show: 是否显示组件</span><br>  <span>borderWidth: 网格的边框线宽</span><br>  <span>tooltip: { … } 提示框组件</span><br><span>}</span></code></pre></blockquote><br>4､ xAxis: 直角坐标系 grid 中的 x 轴，一般情况下单个 grid 组件最多只能放上下两个 x 轴，多于两个 x 轴需要通过配置 offset 属性防止同个位置多个 x 轴的重叠。<br><blockquote><pre><code><span>xAxis: {</span><br>  <span>show: 是否显示组件</span><br>  <span>type: ‘value’数值轴，适用于连续数据 / ‘category’类目轴，适用于离散的类目数据，为该类型时必须通过 data 设置类目数据 / ‘time’时间轴，适用于连续的时序数据，与数值轴相比时间轴带有时间的格式化，在刻度计算上也有所不同，例如会根据跨度的范围来决定使用月，星期，日还是小时范围的刻度 / ‘log’对数轴。适用于对数数据</span><br>  <span>nameTextStyle: { … } 坐标轴名称的文字样式</span><br>  <span>axisLine: { … lineStyle: { … } 坐标轴线线的样式 } 坐标轴轴线相关设置 </span><br>  <span>axisTick: { … lineStyle: { … } 刻度线的样式 } 坐标轴刻度相关设置</span><br>  <span>splitLine: {  //坐标轴在 grid 区域中的分隔线 </span><br>    <span>interval: 坐标轴分隔线的显示间隔，设置成 0 强制显示所有标签，设置为 1，表示『隔一个标签显示一个标签』，如果值为 2，表示隔两个标签显示一个标签，以此类推 </span><br>    <span>lineStyle: { … } 分隔线的样式</span><br>  <span>}</span><br>  <span>axisLabel: { //坐标轴刻度标签的相关设置 </span><br>    <span>interval: 坐标轴刻度标签的显示间隔，默认会采用标签不重叠的策略间隔显示标签。设置成 0 强制显示所有标签。如果设置为 1，表示『隔一个标签显示一个标签』，如果值为 2，表示隔两个标签显示一个标签，以此类推</span><br>    <span>formatter: 刻度标签的内容格式器，支持字符串模板和回调函数两种形式。 </span><br>    <span>// 使用字符串模板，模板变量为刻度默认标签 {value} formatter: ‘{value} kg’</span><br>    <span>// 使用函数模板，函数参数分别为刻度数值（类目），刻度的索引<br>        formatter: function (value, index) {<br>        // 格式化成月/日，只在第一个刻度显示年份<br>            var date = new Date(value);<br>            var texts = [(date.getMonth() + 1), date.getDate()];<br>            if (index === 0) {<br>                texts.unshift(date.getYear());<br>            }<br>            return texts.join(‘/‘);<br>        }<br>    </span><br>  <span>}</span><br>  <span>data: //类目数据，在类目轴（type: ‘category’）中有效 1､所有类目名称列表 data: [‘周一’, ‘周二’, ‘周三’, ‘周四’, ‘周五’, ‘周六’, ‘周日’] 2､  每一项也可以是具体的配置项，此时取配置项中的 <code>value</code> 为类目名<br>    data: [{<br>        value: ‘周一’,<br>        // 突出周一<br>        textStyle: {<br>            fontSize: 20,<br>            color: ‘red’<br>        }<br>    }, ‘周二’, ‘周三’, ‘周四’, ‘周五’, ‘周六’, ‘周日’]<br>  </span><br><span>}</span></code></pre></blockquote>
       
     </div>
 
@@ -391,8 +388,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/26/number/" rel="next" title="JavaScript Number 对象">
-                <i class="fa fa-chevron-left"></i> JavaScript Number 对象
+              <a href="/2017/06/23/fengzhuang/" rel="next" title="JavaScript 封装">
+                <i class="fa fa-chevron-left"></i> JavaScript 封装
               </a>
             
           </div>
@@ -400,10 +397,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/09/16/closure/" rel="prev" title="JavaScript 闭包">
-                JavaScript 闭包 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
