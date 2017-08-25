@@ -307,6 +307,7 @@ blockquote {
   padding: 0 15px;
   color: #666;
   border-left: 4px solid #ddd;
+  word-break: break-all;
 }
 blockquote cite::before {
   content: "-";
@@ -1686,7 +1687,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #eee0ff;
+  background: #6e69b5;
 }
 .links-of-blogroll {
   font-size: 13px;
