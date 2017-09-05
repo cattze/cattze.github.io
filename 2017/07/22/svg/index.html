@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="socat">
 <meta property="og:description" content="SVG 是英文 Scalable Vector Graphics 的缩写，意为可缩放矢量图。SVG 是用XML格式定义的矢量图。相比起其它图片格式(比如JPEG和GIF)，SVG的优势有：  1､SVG 图片可以使用文本编辑器创建和编辑  2､SVG 图片能够实现内容搜索，索引，脚本控制和压缩  3､SVG 图片是可缩放的  4､SVG 图片可以以任意高分辨率打印  5､SVG 图片的缩放显示是无">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-05T07:11:15.000Z">
+<meta property="og:updated_time" content="2017-09-05T07:30:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SVG">
 <meta name="twitter:description" content="SVG 是英文 Scalable Vector Graphics 的缩写，意为可缩放矢量图。SVG 是用XML格式定义的矢量图。相比起其它图片格式(比如JPEG和GIF)，SVG的优势有：  1､SVG 图片可以使用文本编辑器创建和编辑  2､SVG 图片能够实现内容搜索，索引，脚本控制和压缩  3､SVG 图片是可缩放的  4､SVG 图片可以以任意高分辨率打印  5､SVG 图片的缩放显示是无">
@@ -350,7 +350,8 @@
       
 
       
-        <p>SVG 是英文 Scalable Vector Graphics 的缩写，意为可缩放矢量图。SVG 是用XML格式定义的矢量图。<br>相比起其它图片格式(比如JPEG和GIF)，SVG的优势有：<br>  1､SVG 图片可以使用文本编辑器创建和编辑<br>  2､SVG 图片能够实现内容搜索，索引，脚本控制和压缩<br>  3､SVG 图片是可缩放的<br>  4､SVG 图片可以以任意高分辨率打印<br>  5､SVG 图片的缩放显示是无损的<br>  6､SVG 是开放标准<br>  7､VG 文件是纯XML的<br>最常见的元素：<br>一､rect:基础图形，基于角的位置和矩形的宽度和高度来创建的矩形。x:矩形距离左边的距离，y:矩形距离上边的距离，rx和ry矩形四个角的圆角效果。</p>
+        <p>SVG 是英文 Scalable Vector Graphics 的缩写，意为可缩放矢量图。SVG 是用XML格式定义的矢量图。<br>相比起其它图片格式(比如JPEG和GIF)，SVG的优势有：<br>  1､SVG 图片可以使用文本编辑器创建和编辑<br>  2､SVG 图片能够实现内容搜索，索引，脚本控制和压缩<br>  3､SVG 图片是可缩放的<br>  4､SVG 图片可以以任意高分辨率打印<br>  5､SVG 图片的缩放显示是无损的<br>  6､SVG 是开放标准<br>  7､VG 文件是纯XML的</p>
+<p></p><h1>最常见的元素：</h1><br>一､rect:基础图形，基于角的位置和矩形的宽度和高度来创建的矩形。x:矩形距离左边的距离，y:矩形距离上边的距离，rx和ry矩形四个角的圆角效果。<p></p>
 <p><blockquote><pre><code><br>  <span>&lt;svg width=”400” height=”110”&gt;</span><br>    <span>&lt;rect x=”50” y=”20” rx=”20” ry=”20” width=”300” height=”100” style=”fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)” /&gt;</span><br>  <span>&lt;/svg&gt;</span><br></code></pre></blockquote><br>二、circle:基础图形，基于中心点以及半径来创建的圆形。cx和cy圆心的坐标，r:圆的半径长度。</p>
 <p><blockquote><pre><code><br>  <span>&lt;svg height=”100” width=”100”&gt;</span><br>    <span>&lt;circle cx=”50” cy=”50” r=”40” stroke=”black” stroke-width=”3” fill=”red” /&gt;</span><br>  <span>&lt;/svg&gt;</span><br></code></pre></blockquote><br>三、ellipse:绘制一个椭圆，椭圆跟圆形很相似。不同之处在于椭圆有两个半径，并且这两个值不同。cx:椭圆的x坐标，cy:椭圆的y坐标，rx:椭圆的横向半径，ry:椭圆的纵向半径。</p>
 <p><blockquote><pre><code><br>  <span>&lt;svg height=”140” width=”500”&gt;</span><br>    <span>&lt;ellipse cx=”240” cy=”100” rx=”220” ry=”30” style=”fill:purple” /&gt;</span><br>    <span>&lt;ellipse cx=”220” cy=”70” rx=”190” ry=”20” style=”fill:lime” /&gt;</span><br>  <span>&lt;/svg&gt;</span><br></code></pre></blockquote><br>四、line:绘制一条直线。x1:直线的x轴起始坐标，y1:直线的y轴起始坐标，x2:直线的x轴终止坐标，y2:直线的y轴终止坐标。</p>
@@ -358,6 +359,7 @@
 <p><blockquote><pre><code><br>  <span>&lt;svg height=”180” width=”500”&gt;</span><br>    <span>&lt;polyline points=”0,40 40,40 40,80 80,80 80,120 120,120 120,160” style=”fill:none;stroke:black;stroke-width:3” /&gt;</span><br>  <span>&lt;/svg&gt;</span><br></code></pre></blockquote></p>
 <p><blockquote><pre><code><br>  <span>&lt;svg height=”210” width=”500”&gt;</span><br>    <span>&lt;polygon points=”100,10 40,198 190,78 10,78 160,198” style=”fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;” /&gt;</span><br>  <span>&lt;/svg&gt;</span><br></code></pre></blockquote><br>六、path:万能的图形，可以用来创建任意的形状。所有基础图形都能由它来创建。<br>  M x y：移动虚拟画笔到指定的（x,y）坐标，仅移动不绘制。<br>  L x y：从当前画笔所在位置绘制一条直线到指定的（x,y）坐标。<br>  H x：绘制一条水平直线到参数指定的x坐标点，y坐标为画笔的y坐标。<br>  V y：从当前位置绘制一条垂直直线到参数指定的y坐标。<br>  Z：从结束点绘制一条直线到开始点，闭合路径。</p>
 <p><blockquote><pre><code><br>  <span>&lt;svg height=”210” width=”500”&gt;</span><br>    <span>&lt;path d=”M150 0 L75 200 L225 200 Z” /&gt;</span><br>  <span>&lt;/svg&gt;</span><br></code></pre></blockquote><br>定义了一个路径，从点 150,0 开始，连直线到点 75,200，然后连直线到点 225,200，最后闭合这个路径，连直线回到点 150,0。</p>
+<p></p><h1>元素添加样式：</h1><br>fill:元素的填充颜色。<br>fill-opacity:元素的填充颜色透明度。<br>stroke:元素的笔画颜色。<br>stroke-width:元素的笔画宽度。<br>stroke-opacity:元素的笔画颜色透明度。<br>stroke-linecap:描边端点表现方式。可用值有：butt, round, square, inherit。<br>stroke-dasharray:虚线。<p></p>
 
       
     </div>
@@ -451,8 +453,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -505,6 +516,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">最常见的元素：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">元素添加样式：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
