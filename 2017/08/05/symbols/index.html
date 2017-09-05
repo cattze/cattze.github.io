@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="标记的作用是定义一个图像模板，你可以使用标记实例化它，然后在SVG文档中反复使用，这种用法非常的高效。本身不会输出任何图像，只有使用实例化后才会显示。 标记的作用是能从SVG文档内部取出一个节点，克隆它，并把它输出到别处。跟‘引用’很相似，但它是深度克隆。   &amp;lt;svg viewBox=”0 0 150 150” height=’300’&amp;gt;    &amp;lt;svg style=”disp">
+<meta name="description" content="&amp;lt;symbol&amp;gt;标记的作用是定义一个图像模板，你可以使用&amp;lt;use&amp;gt;标记实例化它，然后在SVG文档中反复使用，这种用法非常的高效。&amp;lt;symbol&amp;gt;本身不会输出任何图像，只有使用&amp;lt;use&amp;gt;实例化后才会显示。&amp;lt;use&amp;gt;标记的作用是能从SVG文档内部取出一个节点，克隆它，并把它输出到别处。跟‘引用’很相似，但它是深度克隆。   &amp;lt;svg v">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SVG Symbols">
 <meta property="og:url" content="http:socat.cc/2017/08/05/symbols/index.html">
 <meta property="og:site_name" content="socat">
-<meta property="og:description" content="标记的作用是定义一个图像模板，你可以使用标记实例化它，然后在SVG文档中反复使用，这种用法非常的高效。本身不会输出任何图像，只有使用实例化后才会显示。 标记的作用是能从SVG文档内部取出一个节点，克隆它，并把它输出到别处。跟‘引用’很相似，但它是深度克隆。   &amp;lt;svg viewBox=”0 0 150 150” height=’300’&amp;gt;    &amp;lt;svg style=”disp">
+<meta property="og:description" content="&amp;lt;symbol&amp;gt;标记的作用是定义一个图像模板，你可以使用&amp;lt;use&amp;gt;标记实例化它，然后在SVG文档中反复使用，这种用法非常的高效。&amp;lt;symbol&amp;gt;本身不会输出任何图像，只有使用&amp;lt;use&amp;gt;实例化后才会显示。&amp;lt;use&amp;gt;标记的作用是能从SVG文档内部取出一个节点，克隆它，并把它输出到别处。跟‘引用’很相似，但它是深度克隆。   &amp;lt;svg v">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-05T08:01:17.000Z">
+<meta property="og:updated_time" content="2017-09-05T08:06:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SVG Symbols">
-<meta name="twitter:description" content="标记的作用是定义一个图像模板，你可以使用标记实例化它，然后在SVG文档中反复使用，这种用法非常的高效。本身不会输出任何图像，只有使用实例化后才会显示。 标记的作用是能从SVG文档内部取出一个节点，克隆它，并把它输出到别处。跟‘引用’很相似，但它是深度克隆。   &amp;lt;svg viewBox=”0 0 150 150” height=’300’&amp;gt;    &amp;lt;svg style=”disp">
+<meta name="twitter:description" content="&amp;lt;symbol&amp;gt;标记的作用是定义一个图像模板，你可以使用&amp;lt;use&amp;gt;标记实例化它，然后在SVG文档中反复使用，这种用法非常的高效。&amp;lt;symbol&amp;gt;本身不会输出任何图像，只有使用&amp;lt;use&amp;gt;实例化后才会显示。&amp;lt;use&amp;gt;标记的作用是能从SVG文档内部取出一个节点，克隆它，并把它输出到别处。跟‘引用’很相似，但它是深度克隆。   &amp;lt;svg v">
 
 
 
@@ -350,9 +350,8 @@
       
 
       
-        <p><symbol>标记的作用是定义一个图像模板，你可以使用<use></use>标记实例化它，然后在SVG文档中反复使用，这种用法非常的高效。<symbol>本身不会输出任何图像，只有使用<use></use>实例化后才会显示。</symbol></symbol></p>
-<p><use></use>标记的作用是能从SVG文档内部取出一个节点，克隆它，并把它输出到别处。跟‘引用’很相似，但它是深度克隆。</p>
-<blockquote><pre><code><br>  <span>&lt;svg viewBox=”0 0 150 150” height=’300’&gt;</span><br>    <span>&lt;svg style=”display: none;”&gt;</span><br>      <span>&lt;symbol id=”sym01” viewBox=”0 0 150 110”&gt;</span><br>        <span>&lt;circle cx=”50” cy=”50” r=”40” stroke-width=”8” stroke=”red” fill=”red”/&gt;</span><br>        <span>&lt;circle cx=”90” cy=”60” r=”40” stroke-width=”8” stroke=”green” fill=”white”/&gt;</span><br>      <span>&lt;/symbol&gt;</span><br>    <span>&lt;/svg&gt;</span><br>    <span>&lt;use xlink:href=”#sym01” x=”0” y=”0” width=”100” height=”50”/&gt;</span><br>    <span>&lt;use xlink:href=”#sym01” x=”0” y=”50” width=”75” height=”38”/&gt;</span><br>    <span>&lt;use xlink:href=”#sym01” x=”0” y=”100” width=”50” height=”25”/&gt;</span><br>  <span>&lt;/svg&gt;</span><br></code></pre></blockquote><br>你定义了一组图形对象（使用<symbol>元素）之后，可以使用<use></use>元素来对它进行无限次实例化展示。你使用xlink:href属性来指定你想要展示哪一组图标，这里，我们要展示的是id为#sym01<symbol>元素。<br>你可能注意到了我们给包裹<symbol>元素的SVG标签加了一个style=”display: none;”的样式：这是因为即使<symbol>本身没有显示，但是包裹它的<svg>元素依旧会渲染并占用一些页面空间，这就是为什么我们需要隐藏svg元素。<br/>symbol.svg<br/><blockquote><pre><code><br/>  <span>&lt;svg&gt;</span><br/>    <span>&lt;symbol id=”sym01” viewBox=”0 0 150 110”&gt;</span><br/>      <span>&lt;circle cx=”50” cy=”50” r=”40” stroke-width=”8” stroke=”red” fill=”red”/&gt;</span><br/>      <span>&lt;circle cx=”90” cy=”60” r=”40” stroke-width=”8” stroke=”green” fill=”white”/&gt;</span><br/>    <span>&lt;/symbol&gt;</span><br/>  <span>&lt;/svg&gt;</span><br/></code></pre></blockquote><br/>引入<br/><blockquote><pre><code><br/>  <span>&lt;svg&gt;</span><br/>    <span>&lt;use xlink:href=”img/symbol.svg#sym01”/&gt;</span><br/>  <span>&lt;/svg&gt;</span><br/></code></pre></blockquote></svg></symbol></symbol></symbol></symbol>
+        <p>&lt;symbol&gt;标记的作用是定义一个图像模板，你可以使用&lt;use&gt;标记实例化它，然后在SVG文档中反复使用，这种用法非常的高效。&lt;symbol&gt;本身不会输出任何图像，只有使用&lt;use&gt;实例化后才会显示。&lt;use&gt;标记的作用是能从SVG文档内部取出一个节点，克隆它，并把它输出到别处。跟‘引用’很相似，但它是深度克隆。</p>
+<blockquote><pre><code><br>  <span>&lt;svg viewBox=”0 0 150 150” height=’300’&gt;</span><br>    <span>&lt;svg style=”display: none;”&gt;</span><br>      <span>&lt;symbol id=”sym01” viewBox=”0 0 150 110”&gt;</span><br>        <span>&lt;circle cx=”50” cy=”50” r=”40” stroke-width=”8” stroke=”red” fill=”red”/&gt;</span><br>        <span>&lt;circle cx=”90” cy=”60” r=”40” stroke-width=”8” stroke=”green” fill=”white”/&gt;</span><br>      <span>&lt;/symbol&gt;</span><br>    <span>&lt;/svg&gt;</span><br>    <span>&lt;use xlink:href=”#sym01” x=”0” y=”0” width=”100” height=”50”/&gt;</span><br>    <span>&lt;use xlink:href=”#sym01” x=”0” y=”50” width=”75” height=”38”/&gt;</span><br>    <span>&lt;use xlink:href=”#sym01” x=”0” y=”100” width=”50” height=”25”/&gt;</span><br>  <span>&lt;/svg&gt;</span><br></code></pre></blockquote><br>你定义了一组图形对象（使用&lt;symbol&gt;元素）之后，可以使用&lt;use&gt;元素来对它进行无限次实例化展示。你使用xlink:href属性来指定你想要展示哪一组图标，这里，我们要展示的是id为#sym01&lt;symbol&gt;元素。你可能注意到了我们给包裹&lt;symbol&gt;元素的SVG标签加了一个style=”display: none;”的样式：这是因为即使&lt;symbol&gt;本身没有显示，但是包裹它的&lt;svg&gt;元素依旧会渲染并占用一些页面空间，这就是为什么我们需要隐藏svg元素。<br>symbol.svg<br><blockquote><pre><code><br>  <span>&lt;svg&gt;</span><br>    <span>&lt;symbol id=”sym01” viewBox=”0 0 150 110”&gt;</span><br>      <span>&lt;circle cx=”50” cy=”50” r=”40” stroke-width=”8” stroke=”red” fill=”red”/&gt;</span><br>      <span>&lt;circle cx=”90” cy=”60” r=”40” stroke-width=”8” stroke=”green” fill=”white”/&gt;</span><br>    <span>&lt;/symbol&gt;</span><br>  <span>&lt;/svg&gt;</span><br></code></pre></blockquote><br>引入<br><blockquote><pre><code><br>  <span>&lt;svg&gt;</span><br>    <span>&lt;use xlink:href=”img/symbol.svg#sym01”/&gt;</span><br>  <span>&lt;/svg&gt;</span><br></code></pre></blockquote>
       
     </div>
 
