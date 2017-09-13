@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="socat">
 <meta property="og:description" content="Content-TypeMediaType，即是Internet Media Type，互联网媒体类型；也叫做MIME类型，在Http协议消息头中，使用Content-Type来表示具体请求中的媒体类型信息。   类型格式：type/subtype(;parameter)? type    主类型，任意的字符串，如text，如果是号代表所有；   subtype 子类型，任意的字符串，如html，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-13T06:08:56.000Z">
+<meta property="og:updated_time" content="2017-09-13T06:10:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Http Header里的Content-Type">
 <meta name="twitter:description" content="Content-TypeMediaType，即是Internet Media Type，互联网媒体类型；也叫做MIME类型，在Http协议消息头中，使用Content-Type来表示具体请求中的媒体类型信息。   类型格式：type/subtype(;parameter)? type    主类型，任意的字符串，如text，如果是号代表所有；   subtype 子类型，任意的字符串，如html，">
@@ -375,6 +375,131 @@
 <td style="text-align:left">Allow</td>
 <td style="text-align:left">对某网络资源的有效的请求行为，不允许则返回405</td>
 <td style="text-align:left">Allow: GET, HEAD</td>
+</tr>
+<tr>
+<td style="text-align:left">Cache-Control</td>
+<td style="text-align:left">告诉所有的缓存机制是否可以缓存及哪种类型</td>
+<td style="text-align:left">Cache-Control: no-cache</td>
+</tr>
+<tr>
+<td style="text-align:left">Content-Encoding</td>
+<td style="text-align:left">web服务器支持的返回内容压缩编码类型。</td>
+<td style="text-align:left">Content-Encoding: gzip</td>
+</tr>
+<tr>
+<td style="text-align:left">Content-Language</td>
+<td style="text-align:left">响应体的语言</td>
+<td style="text-align:left">Content-Language: en,zh</td>
+</tr>
+<tr>
+<td style="text-align:left">Content-Length</td>
+<td style="text-align:left">响应体的长度</td>
+<td style="text-align:left">Content-Length: 348</td>
+</tr>
+<tr>
+<td style="text-align:left">Content-Location</td>
+<td style="text-align:left">请求资源可替代的备用的另一地址</td>
+<td style="text-align:left">Content-Location: /index.htm</td>
+</tr>
+<tr>
+<td style="text-align:left">Content-MD5</td>
+<td style="text-align:left">返回资源的MD5校验值</td>
+<td style="text-align:left">Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ==</td>
+</tr>
+<tr>
+<td style="text-align:left">Content-Range</td>
+<td style="text-align:left">在整个返回体中本部分的字节位置</td>
+<td style="text-align:left">Content-Range: bytes 21010-47021/47022</td>
+</tr>
+<tr>
+<td style="text-align:left">Content-Type</td>
+<td style="text-align:left">返回内容的MIME类型</td>
+<td style="text-align:left">Content-Type: text/html; charset=utf-8</td>
+</tr>
+<tr>
+<td style="text-align:left">Date</td>
+<td style="text-align:left">原始服务器消息发出的时间</td>
+<td style="text-align:left">Date: Tue, 15 Nov 2010 08:12:31 GMT</td>
+</tr>
+<tr>
+<td style="text-align:left">ETag</td>
+<td style="text-align:left">请求变量的实体标签的当前值</td>
+<td style="text-align:left">ETag: “737060cd8c284d8af7ad3082f209582d”</td>
+</tr>
+<tr>
+<td style="text-align:left">Expires</td>
+<td style="text-align:left">响应过期的日期和时间</td>
+<td style="text-align:left">Expires: Thu, 01 Dec 2010 16:00:00 GMT</td>
+</tr>
+<tr>
+<td style="text-align:left">Last-Modified</td>
+<td style="text-align:left">请求资源的最后修改时间</td>
+<td style="text-align:left">Last-Modified: Tue, 15 Nov 2010 12:45:26 GMT</td>
+</tr>
+<tr>
+<td style="text-align:left">Location</td>
+<td style="text-align:left">用来重定向接收方到非请求URL的位置来完成请求或标识新的资源</td>
+<td style="text-align:left">Location: socat.cc/2017/09/16/http/</td>
+</tr>
+<tr>
+<td style="text-align:left">Pragma</td>
+<td style="text-align:left">包括实现特定的指令，它可应用到响应链上的任何接收方</td>
+<td style="text-align:left">Pragma: no-cache</td>
+</tr>
+<tr>
+<td style="text-align:left">Proxy-Authenticate</td>
+<td style="text-align:left">它指出认证方案和可应用到代理的该URL上的参数</td>
+<td style="text-align:left">Proxy-Authenticate: Basic</td>
+</tr>
+<tr>
+<td style="text-align:left">refresh</td>
+<td style="text-align:left">应用于重定向或一个新的资源被创造，在5秒之后重定向（由网景提出，被大部分浏览器支持）</td>
+<td style="text-align:left">Refresh: 5; url = socat.cc/2017/09/16/http/</td>
+</tr>
+<tr>
+<td style="text-align:left">Retry-After</td>
+<td style="text-align:left">如果实体暂时不可取，通知客户端在指定时间之后再次尝试</td>
+<td style="text-align:left">Retry-After: 120</td>
+</tr>
+<tr>
+<td style="text-align:left">Server</td>
+<td style="text-align:left">web服务器软件名称</td>
+<td style="text-align:left">Server: Apache/1.3.27 (Unix) (Red-Hat/Linux)</td>
+</tr>
+<tr>
+<td style="text-align:left">Set-Cookie</td>
+<td style="text-align:left">设置Http Cookie</td>
+<td style="text-align:left">Set-Cookie: UserID=JohnDoe; Max-Age=3600; Version=1</td>
+</tr>
+<tr>
+<td style="text-align:left">Trailer</td>
+<td style="text-align:left">指出头域在分块传输编码的尾部存在</td>
+<td style="text-align:left">Trailer: Max-Forwards</td>
+</tr>
+<tr>
+<td style="text-align:left">Transfer-Encoding</td>
+<td style="text-align:left">文件传输编码</td>
+<td style="text-align:left">Transfer-Encoding:chunked</td>
+</tr>
+<tr>
+<td style="text-align:left">Vary</td>
+<td style="text-align:left">告诉下游代理是使用缓存响应还是从原始服务器请求</td>
+<td style="text-align:left">Vary: *</td>
+</tr>
+<tr>
+<td style="text-align:left">Via</td>
+<td style="text-align:left">告知代理客户端响应是通过哪里发送的</td>
+<td style="text-align:left">Via: 1.0 fred, 1.1 nowhere.com (Apache/1.1)</td>
+</tr>
+<tr>
+<td style="text-align:left">Warning</td>
+<td style="text-align:left">警告实体可能存在的问题</td>
+<td style="text-align:left">Warning: 199 Miscellaneous warning</td>
+</tr>
+<tr>
+<td style="text-align:left">WWW-Authenticate</td>
+<td style="text-align:left">表明客户端请求实体应该使用的授权方案</td>
+<td style="text-align:left">WWW-Authenticate: Basic</td>
 </tr>
 </tbody>
 </table>
