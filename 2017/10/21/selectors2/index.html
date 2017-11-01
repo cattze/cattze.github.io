@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="CSS的选择器，作为前端人员都不会陌生的，每天都会用到，基本的通配符选择器（＊）、元素选择器(E)、类选择器（.className）、id选择器（#ID）在这就不多说了。不过有些不常用的基本选择器，今天在这总结一下。一、后代选择器（ div p ）后代选择器（descendant selector）又称为包含选择器。后代选择器可以选择作为某元素后代的元素。比如说：div p，前面 div 为祖先元">
+<meta name="description" content="属性选择器，是对带有指定属性的 HTML 元素设置样式。你可以指定元素的某个属性，还可以指定元素的某个属性和其对应的属性值。一、a[attribute] 用于选取带有指定属性的元素选择带有 target 属性的  元素设置样式 a[target]{ background-color:yellow; }你也可以使用多属性进行选择元素，title 和 target 同时具有这两属性的元素都将被选中a[">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS3 基本选择器selectors">
-<meta property="og:url" content="http:socat.cc/2017/10/21/selectors/index.html">
+<meta property="og:title" content="CSS3 属性选择器selectors">
+<meta property="og:url" content="http:socat.cc/2017/10/21/selectors2/index.html">
 <meta property="og:site_name" content="socat">
-<meta property="og:description" content="CSS的选择器，作为前端人员都不会陌生的，每天都会用到，基本的通配符选择器（＊）、元素选择器(E)、类选择器（.className）、id选择器（#ID）在这就不多说了。不过有些不常用的基本选择器，今天在这总结一下。一、后代选择器（ div p ）后代选择器（descendant selector）又称为包含选择器。后代选择器可以选择作为某元素后代的元素。比如说：div p，前面 div 为祖先元">
+<meta property="og:description" content="属性选择器，是对带有指定属性的 HTML 元素设置样式。你可以指定元素的某个属性，还可以指定元素的某个属性和其对应的属性值。一、a[attribute] 用于选取带有指定属性的元素选择带有 target 属性的  元素设置样式 a[target]{ background-color:yellow; }你也可以使用多属性进行选择元素，title 和 target 同时具有这两属性的元素都将被选中a[">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-30T08:32:19.000Z">
+<meta property="og:updated_time" content="2017-11-01T02:33:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS3 基本选择器selectors">
-<meta name="twitter:description" content="CSS的选择器，作为前端人员都不会陌生的，每天都会用到，基本的通配符选择器（＊）、元素选择器(E)、类选择器（.className）、id选择器（#ID）在这就不多说了。不过有些不常用的基本选择器，今天在这总结一下。一、后代选择器（ div p ）后代选择器（descendant selector）又称为包含选择器。后代选择器可以选择作为某元素后代的元素。比如说：div p，前面 div 为祖先元">
+<meta name="twitter:title" content="CSS3 属性选择器selectors">
+<meta name="twitter:description" content="属性选择器，是对带有指定属性的 HTML 元素设置样式。你可以指定元素的某个属性，还可以指定元素的某个属性和其对应的属性值。一、a[attribute] 用于选取带有指定属性的元素选择带有 target 属性的  元素设置样式 a[target]{ background-color:yellow; }你也可以使用多属性进行选择元素，title 和 target 同时具有这两属性的元素都将被选中a[">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http:socat.cc/2017/10/21/selectors/"/>
+  <link rel="canonical" href="http:socat.cc/2017/10/21/selectors2/"/>
 
 
 
 
 
-  <title> CSS3 基本选择器selectors | socat </title>
+  <title> CSS3 属性选择器selectors | socat </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -256,7 +256,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http:socat.cc/2017/10/21/selectors/">
+    <link itemprop="mainEntityOfPage" href="http:socat.cc/2017/10/21/selectors2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="socat">
@@ -277,7 +277,7 @@
             
             
               
-                CSS3 基本选择器selectors
+                CSS3 属性选择器selectors
               
             
           </h1>
@@ -350,13 +350,8 @@
       
 
       
-        <p>CSS的选择器，作为前端人员都不会陌生的，每天都会用到，基本的通配符选择器（＊）、元素选择器(E)、类选择器（.className）、id选择器（#ID）在这就不多说了。<br>不过有些不常用的基本选择器，今天在这总结一下。<br>一、后代选择器（ div p ）<br>后代选择器（descendant selector）又称为包含选择器。后代选择器可以选择作为某元素后代的元素。<br>比如说：div p，前面 div 为祖先元素，p 为后代元素，所表达的意思就是选择了 div 元素的所有后代 p 元素，请注意他们之间需要一个空格隔开。<br>这个语法就会选择从 div 元素继承的所有 p 元素，而不论 p 的嵌套层次多深。<br>因此，div p 将会选择以下标记中的所有 p 元素。</p>
-<p><blockquote><pre><code><span>div p {color:red;}</span></code></pre></blockquote><br>二、子元素选择器（ div &gt; p ）<br>子元素选择器（Child selectors）只能选择作为某元素子元素的元素。<br>比如说：div &gt; p，其中 div 为父元素，而 p 为子元素，其中 div &gt; p 所表示的是选择了 div 元素下的所有子元素 p 。</p>
-<p><blockquote><pre><code><span>div &gt; p {color:red;}</span></code></pre></blockquote><br>三、相邻兄弟选择器（ div +  p ）<br>相邻兄弟选择器（Adjacent sibling selector）可选择紧接在另一元素后的元素，且二者有相同父元素。<br>比如：div + p ，选择紧接在 div 元素后出现的段落，div 和 p 元素拥有共同的父元素。</p>
-<p><blockquote><pre><code><span>div + p {margin-top:50px;}</span></code></pre></blockquote><br>比如：li + li ，用一个结合符只能选择两个相邻兄弟中的第二个元素，选择li的相邻元素li，li+li其中第二li是第一li的相邻元素，第三个又是第二个相邻元素。依此类推，所以这个选择器只会把列表中的第二个、第三个、第四个列表项变为粗体。</p>
-<p><blockquote><pre><code><br><span>&lt;ul&gt;</span><br>  <span>&lt;li&gt; List item 1 /&lt;li&gt;</span><br>  <span>&lt;li&gt; List item 2 /&lt;li&gt;</span><br>  <span>&lt;li&gt; List item 3 /&lt;li&gt;</span><br>  <span>&lt;li&gt; List item 4 /&lt;li&gt;</span><br><span>/&lt;ul&gt;</span><br><span>li + li {font-weight:bold;}</span><br></code></pre></blockquote><br>四：通用兄弟选择器（ div 〜 p ）<br>通用兄弟元素选择器是CSS3新增加一种选择器，为所有相同的父元素中位于 div 元素之后的所有 p 元素。<br>div~p 选择器 div 之后出现的所有 p。 两种元素必须拥有相同的父元素，但是 p 不必直接紧随 div。</p>
-<p><blockquote><pre><code><span>div~p{ background:#ff0000; }</span></code></pre></blockquote><br>通用兄弟选择器和相邻兄弟选择器极其相似，只不过，相邻兄弟选择器仅选择是元素的仅与其相邻的后面元素（选中的仅一个元素）；而通用兄弟元素选择器，选中的是元素相邻的后面兄弟元素。</p>
-
+        <p>属性选择器，是对带有指定属性的 HTML 元素设置样式。你可以指定元素的某个属性，还可以指定元素的某个属性和其对应的属性值。<br>一、a[attribute] 用于选取带有指定属性的元素<br>选择带有 target 属性的 <a> 元素设置样式</a></p>
+<blockquote><pre><code><span>a[target]{ background-color:yellow; }</span></code></pre></blockquote><br>你也可以使用多属性进行选择元素，title 和 target 同时具有这两属性的元素都将被选中<br><blockquote><pre><code><span>a[title][target]{ background-color:yellow; }</span></code></pre></blockquote>
       
     </div>
 
@@ -392,8 +387,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/16/http/" rel="next" title="Http Header里的Content-Type">
-                <i class="fa fa-chevron-left"></i> Http Header里的Content-Type
+              <a href="/2017/10/14/selectors1/" rel="next" title="CSS3 基本选择器selectors">
+                <i class="fa fa-chevron-left"></i> CSS3 基本选择器selectors
               </a>
             
           </div>
@@ -465,7 +460,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">38</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

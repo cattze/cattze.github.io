@@ -87,19 +87,17 @@
 
 
 
-<meta name="description" content="box-shadow是向框添加一个或多个阴影。向框添加多个阴影时，该属性是由逗号分隔的阴影列表，每个阴影由 2-4 个长度值、可选的颜色值以及可选的 inset 关键词来规定。基本语法 {box-shadow:[inset] x-offset y-offset blur-radius spread-radius color}对象选择器 {box-shadow:[投影方式] X轴偏移量 Y轴偏移量">
+<meta name="description" content="CSS的选择器，作为前端人员都不会陌生的，每天都会用到，基本的通配符选择器（＊）、元素选择器(E)、类选择器（.className）、id选择器（#ID）在这就不多说了。不过有些不常用的基本选择器，今天在这总结一下。一、后代选择器（ div p ）后代选择器（descendant selector）又称为包含选择器。后代选择器可以选择作为某元素后代的元素。比如说：div p，前面 div 为祖先元">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS3阴影box-shadow">
-<meta property="og:url" content="http:socat.cc/2016/05/14/box-shadow/index.html">
+<meta property="og:title" content="CSS3 基本选择器selectors">
+<meta property="og:url" content="http:socat.cc/2017/10/14/selectors1/index.html">
 <meta property="og:site_name" content="socat">
-<meta property="og:description" content="box-shadow是向框添加一个或多个阴影。向框添加多个阴影时，该属性是由逗号分隔的阴影列表，每个阴影由 2-4 个长度值、可选的颜色值以及可选的 inset 关键词来规定。基本语法 {box-shadow:[inset] x-offset y-offset blur-radius spread-radius color}对象选择器 {box-shadow:[投影方式] X轴偏移量 Y轴偏移量">
+<meta property="og:description" content="CSS的选择器，作为前端人员都不会陌生的，每天都会用到，基本的通配符选择器（＊）、元素选择器(E)、类选择器（.className）、id选择器（#ID）在这就不多说了。不过有些不常用的基本选择器，今天在这总结一下。一、后代选择器（ div p ）后代选择器（descendant selector）又称为包含选择器。后代选择器可以选择作为某元素后代的元素。比如说：div p，前面 div 为祖先元">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oo6ltjdyl.bkt.clouddn.com/D090BC71-E99D-4F0B-B855-104ABC81A285.png">
-<meta property="og:updated_time" content="2017-06-23T02:55:59.000Z">
+<meta property="og:updated_time" content="2017-11-01T02:23:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS3阴影box-shadow">
-<meta name="twitter:description" content="box-shadow是向框添加一个或多个阴影。向框添加多个阴影时，该属性是由逗号分隔的阴影列表，每个阴影由 2-4 个长度值、可选的颜色值以及可选的 inset 关键词来规定。基本语法 {box-shadow:[inset] x-offset y-offset blur-radius spread-radius color}对象选择器 {box-shadow:[投影方式] X轴偏移量 Y轴偏移量">
-<meta name="twitter:image" content="http://oo6ltjdyl.bkt.clouddn.com/D090BC71-E99D-4F0B-B855-104ABC81A285.png">
+<meta name="twitter:title" content="CSS3 基本选择器selectors">
+<meta name="twitter:description" content="CSS的选择器，作为前端人员都不会陌生的，每天都会用到，基本的通配符选择器（＊）、元素选择器(E)、类选择器（.className）、id选择器（#ID）在这就不多说了。不过有些不常用的基本选择器，今天在这总结一下。一、后代选择器（ div p ）后代选择器（descendant selector）又称为包含选择器。后代选择器可以选择作为某元素后代的元素。比如说：div p，前面 div 为祖先元">
 
 
 
@@ -127,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http:socat.cc/2016/05/14/box-shadow/"/>
+  <link rel="canonical" href="http:socat.cc/2017/10/14/selectors1/"/>
 
 
 
 
 
-  <title> CSS3阴影box-shadow | socat </title>
+  <title> CSS3 基本选择器selectors | socat </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -258,7 +256,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http:socat.cc/2016/05/14/box-shadow/">
+    <link itemprop="mainEntityOfPage" href="http:socat.cc/2017/10/14/selectors1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="socat">
@@ -279,7 +277,7 @@
             
             
               
-                CSS3阴影box-shadow
+                CSS3 基本选择器selectors
               
             
           </h1>
@@ -294,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-14T00:00:00+08:00">
-                2016-05-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-14T00:00:00+08:00">
+                2017-10-14
               </time>
             
 
@@ -352,11 +350,12 @@
       
 
       
-        <p>box-shadow是向框添加一个或多个阴影。向框添加多个阴影时，该属性是由逗号分隔的阴影列表，每个阴影由 2-4 个长度值、可选的颜色值以及可选的 inset 关键词来规定。<br>基本语法 {box-shadow:[inset] x-offset y-offset blur-radius spread-radius color}<br>对象选择器 {box-shadow:[投影方式] X轴偏移量 Y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色}</p>
-<p>box-shadow属性的参数设置取值：<br>inset（阴影类型）：此参数可选。如不设值，默认投影方式是外阴影（outset），如取其唯一值“inset”，其投影为内阴影。<br>X-offset（X轴偏移量）：此参数必选。阴影水平偏移量，其值可以是正负值。如果为正值，则阴影在对象的右边。其值为负值，阴影在对象的左边。<br>Y-offset（Y轴偏移量）：此参数必选。阴影垂直偏移量，其值可以是正负值。如果为正值，则阴影在对象的底部。其值为负值，阴影在对象的顶部。<br>blur-radius（阴影模糊半径）：此参数可选。其值只能为正值，如果其值为零，表示阴影不具模糊效果，其值越大阴影的边缘就越模糊。<br>spread-radius（阴影扩展半径）：此参数可选。其值可以是正负值，如果为正值，整个阴影都延展扩大。其值为负值，整个阴影则缩小。<br>color（阴影颜色）：此参数可选。如不设定颜色，浏览器会默认取颜色，但浏览器默认取色不一致。建议不要省略此参数。</p>
-<p>为了兼容各主流浏览器并支持这些主流浏览器的较低版本，在基于Webkit的Chrome和Safari等浏览器上使用box-shadow属性时，我们需要将属性的名称写成-webkit-box-shadow的形式。Firefox浏览器则需要写成-moz-box-shadow的形式。</p>
-<p><blockquote><pre><code><span>.box-shadow {</span><br>  <span>//Firefox</span><br>  <span>-moz-box-shadow: 投影方式 X轴偏移量 Y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色;</span><br>  <span>//Safariand Google chrome  </span><br>  <span>-webkit-box-shadow: 投影方式 X轴偏移量 Y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色;</span><br>  <span>box-shadow:  投影方式 X轴偏移量 Y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色;</span><br><span>}</span></code></pre></blockquote><br>单边效果（多层次的box-shadow应用）：</p>
-<p><blockquote><pre><code><span>.demo { </span><br>  <span>box-shadow: -2px 0px 0px red, //左边阴影 </span><br>  <span>2px 0px 0px yellow, //右边阴影</span><br>  <span>0px 2px 0px blue, //底部阴影</span><br>  <span>0px -2px 0px green; //顶部阴影</span><br><span>}</span></code></pre></blockquote><br><img src="http://oo6ltjdyl.bkt.clouddn.com/D090BC71-E99D-4F0B-B855-104ABC81A285.png" alt=""><br>设计四边阴影时，我们通过改变X-offset和Y-offset的正负值来实现。X-offset为正时生成右边阴影，为负时生成左边阴影。Y-offset为正时生成底部阴影，为负时生成顶部阴影。并且把模糊半径设置为0,如果不设置为0其他三边也将会有阴影，并且涉及到一个多阴影的顺序问题。当给同一个元素使用多个阴影属性时，需要注意它的顺序，最先写的阴影将显示在最顶层。<br>在使用多层次的阴影时还需注意，如果前面的阴影模糊值小于后面的阴影模糊值，那么前面的显示在后面之上，如果前面阴影的模糊值大于后面的阴影模糊值，那么前面的阴影将遮住后面的阴影效果。</p>
+        <p>CSS的选择器，作为前端人员都不会陌生的，每天都会用到，基本的通配符选择器（＊）、元素选择器(E)、类选择器（.className）、id选择器（#ID）在这就不多说了。<br>不过有些不常用的基本选择器，今天在这总结一下。<br>一、后代选择器（ div p ）<br>后代选择器（descendant selector）又称为包含选择器。后代选择器可以选择作为某元素后代的元素。<br>比如说：div p，前面 div 为祖先元素，p 为后代元素，所表达的意思就是选择了 div 元素的所有后代 p 元素，请注意他们之间需要一个空格隔开。<br>这个语法就会选择从 div 元素继承的所有 p 元素，而不论 p 的嵌套层次多深。<br>因此，div p 将会选择以下标记中的所有 p 元素。</p>
+<p><blockquote><pre><code><span>div p {color:red;}</span></code></pre></blockquote><br>二、子元素选择器（ div &gt; p ）<br>子元素选择器（Child selectors）只能选择作为某元素子元素的元素。<br>比如说：div &gt; p，其中 div 为父元素，而 p 为子元素，其中 div &gt; p 所表示的是选择了 div 元素下的所有子元素 p 。</p>
+<p><blockquote><pre><code><span>div &gt; p {color:red;}</span></code></pre></blockquote><br>三、相邻兄弟选择器（ div +  p ）<br>相邻兄弟选择器（Adjacent sibling selector）可选择紧接在另一元素后的元素，且二者有相同父元素。<br>比如：div + p ，选择紧接在 div 元素后出现的段落，div 和 p 元素拥有共同的父元素。</p>
+<p><blockquote><pre><code><span>div + p {margin-top:50px;}</span></code></pre></blockquote><br>比如：li + li ，用一个结合符只能选择两个相邻兄弟中的第二个元素，选择li的相邻元素li，li+li其中第二li是第一li的相邻元素，第三个又是第二个相邻元素。依此类推，所以这个选择器只会把列表中的第二个、第三个、第四个列表项变为粗体。</p>
+<p><blockquote><pre><code><br><span>&lt;ul&gt;</span><br>  <span>&lt;li&gt; List item 1 /&lt;li&gt;</span><br>  <span>&lt;li&gt; List item 2 /&lt;li&gt;</span><br>  <span>&lt;li&gt; List item 3 /&lt;li&gt;</span><br>  <span>&lt;li&gt; List item 4 /&lt;li&gt;</span><br><span>/&lt;ul&gt;</span><br><span>li + li {font-weight:bold;}</span><br></code></pre></blockquote><br>四：通用兄弟选择器（ div 〜 p ）<br>通用兄弟元素选择器是CSS3新增加一种选择器，为所有相同的父元素中位于 div 元素之后的所有 p 元素。<br>div~p 选择器 div 之后出现的所有 p。 两种元素必须拥有相同的父元素，但是 p 不必直接紧随 div。</p>
+<p><blockquote><pre><code><span>div~p{ background:#ff0000; }</span></code></pre></blockquote><br>通用兄弟选择器和相邻兄弟选择器极其相似，只不过，相邻兄弟选择器仅选择是元素的仅与其相邻的后面元素（选中的仅一个元素）；而通用兄弟元素选择器，选中的是元素相邻的后面兄弟元素。</p>
 
       
     </div>
@@ -393,8 +392,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/22/Flexbox/" rel="next" title="Flex布局-骰子">
-                <i class="fa fa-chevron-left"></i> Flex布局-骰子
+              <a href="/2017/09/16/http/" rel="next" title="Http Header里的Content-Type">
+                <i class="fa fa-chevron-left"></i> Http Header里的Content-Type
               </a>
             
           </div>
@@ -403,8 +402,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/05/21/AngularJS/" rel="prev" title="AngularJs工作原理">
-                AngularJs工作原理 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/10/21/selectors2/" rel="prev" title="CSS3 属性选择器selectors">
+                CSS3 属性选择器selectors <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
