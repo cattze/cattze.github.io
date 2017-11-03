@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="一、锚点伪类1､ :link 选择未被访问的链接，并设置其样式。:link 选择器不会设置已经访问过的链接的样式。 a:link{ background-color:yellow; }2､ :visited 选择已访问的链接，并设置其样式。 a:visited{ background-color:yellow; }3､ :active 选择活动链接，并设置其样式。当您在一个链接上点击时，它就会成为">
+<meta name="description" content="一、锚点伪类1､ :link 选择未被访问的链接，并设置其样式。:link 选择器不会设置已经访问过的链接的样式。 a:link{ background-color:yellow; }2､ :visited 选择已访问的链接，并设置其样式。a:visited{ background-color:yellow; }3､ :active 选择活动链接，并设置其样式。当您在一个链接上点击时，它就会成为活">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS3 伪类选择器">
 <meta property="og:url" content="http:socat.cc/2017/11/03/selectors3/index.html">
 <meta property="og:site_name" content="socat">
-<meta property="og:description" content="一、锚点伪类1､ :link 选择未被访问的链接，并设置其样式。:link 选择器不会设置已经访问过的链接的样式。 a:link{ background-color:yellow; }2､ :visited 选择已访问的链接，并设置其样式。 a:visited{ background-color:yellow; }3､ :active 选择活动链接，并设置其样式。当您在一个链接上点击时，它就会成为">
+<meta property="og:description" content="一、锚点伪类1､ :link 选择未被访问的链接，并设置其样式。:link 选择器不会设置已经访问过的链接的样式。 a:link{ background-color:yellow; }2､ :visited 选择已访问的链接，并设置其样式。a:visited{ background-color:yellow; }3､ :active 选择活动链接，并设置其样式。当您在一个链接上点击时，它就会成为活">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-03T02:34:55.000Z">
+<meta property="og:updated_time" content="2017-11-03T07:17:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS3 伪类选择器">
-<meta name="twitter:description" content="一、锚点伪类1､ :link 选择未被访问的链接，并设置其样式。:link 选择器不会设置已经访问过的链接的样式。 a:link{ background-color:yellow; }2､ :visited 选择已访问的链接，并设置其样式。 a:visited{ background-color:yellow; }3､ :active 选择活动链接，并设置其样式。当您在一个链接上点击时，它就会成为">
+<meta name="twitter:description" content="一、锚点伪类1､ :link 选择未被访问的链接，并设置其样式。:link 选择器不会设置已经访问过的链接的样式。 a:link{ background-color:yellow; }2､ :visited 选择已访问的链接，并设置其样式。a:visited{ background-color:yellow; }3､ :active 选择活动链接，并设置其样式。当您在一个链接上点击时，它就会成为活">
 
 
 
@@ -351,12 +351,7 @@
 
       
         <p>一、锚点伪类<br>1､ :link 选择未被访问的链接，并设置其样式。:link 选择器不会设置已经访问过的链接的样式。</p>
-<p><blockquote><pre><code><span>a:link{ background-color:yellow; }</span></code></pre></blockquote><br>2､ :visited 选择已访问的链接，并设置其样式。</p>
-<p><blockquote><pre><code><span>a:visited{ background-color:yellow; }</span></code></pre></blockquote><br>3､ :active 选择活动链接，并设置其样式。当您在一个链接上点击时，它就会成为活动的（激活的）。</p>
-<p><blockquote><pre><code><span>a:active{ background-color:yellow; }</span></code></pre></blockquote><br>4､ :hover 选择鼠标指针浮动在其上的元素，并设置其样式。:hover 选择器可用于所有元素，不只是链接。</p>
-<p><blockquote><pre><code><span>a:hover{ background-color:yellow; }</span></code></pre></blockquote><br>5､ :focus 选择获得焦点的输入字段，并设置其样式。接收键盘事件或其他用户输入的元素都允许 :focus 选择器。</p>
-<p><blockquote><pre><code><span>input:focus{ background-color:yellow; }</span></code></pre></blockquote><br><span style="color:red">他们的先后顺序，要让他们遵守一个爱恨原则LoVe/HAte,也就是Link–visited–hover–active。这样样式才能生效。</span></p>
-
+<blockquote><pre><code><span>a:link{ background-color:yellow; }</span></code></pre></blockquote><br>2､ :visited 选择已访问的链接，并设置其样式。<br><blockquote><pre><code><span>a:visited{ background-color:yellow; }</span></code></pre></blockquote><br>3､ :active 选择活动链接，并设置其样式。当您在一个链接上点击时，它就会成为活动的（激活的）。<br><blockquote><pre><code><span>a:active{ background-color:yellow; }</span></code></pre></blockquote><br>4､ :hover 选择鼠标指针浮动在其上的元素，并设置其样式。:hover 选择器可用于所有元素，不只是链接。<br><blockquote><pre><code><span>a:hover{ background-color:yellow; }</span></code></pre></blockquote><br>5､ :focus 选择获得焦点的输入字段，并设置其样式。接收键盘事件或其他用户输入的元素都允许 :focus 选择器。<br><blockquote><pre><code><span>input:focus{ background-color:yellow; }</span></code></pre></blockquote><br><span style="color:red">他们的先后顺序，要让他们遵守一个爱恨原则LoVe/HAte,也就是Link–visited–hover–active。这样样式才能生效。</span><br>二、元素状态<br>1､ :enabled 为所有 type=”text” 的已启用的 input 元素设置其样式。:enabled 选择器匹配每个已启用的元素（大多用在表单元素上）。<br><blockquote><pre><code><span>input[type=”text”]:enabled{ background-color: #ff0000; }</span></code></pre></blockquote><br>2､ :disabled 为所有 type=”text” 的被禁用的 input 元素设置其样式。:disabled 选择器匹配每个被禁用的元素（大多用在表单元素上）。<br><blockquote><pre><code><span>input[type=”text”]:disabled{ background-color: #dddddd; }</span></code></pre></blockquote><br>3､ :checked 为所有被选中的 input 元素设置其样式。:checked 选择器匹配每个已被选中的 input 元素（只用于单选按钮和复选框）。<br><blockquote><pre><code><span>input:checked{ background-color: #ff0000; }</span></code></pre></blockquote><br>三、nth选择器<br>1､ :first-of-type 指定父元素的首个 p 元素的样式。:first-of-type 选择器匹配属于其父元素的特定类型的首个子元素的每个元素，等同于 :nth-of-type(1)。<br><blockquote><pre><code><span>p:first-of-type{ background:#ff0000; }</span></code></pre></blockquote><br>2､ :last-of-type 指定父元素的最后一个 p 元素的样式。:last-of-type 选择器匹配属于其父元素的特定类型的最后一个子元素的每个元素，等同于 :nth-last-of-type(1)。<br><blockquote><pre><code><span>p:last-of-type{ background:#ff0000; }</span></code></pre></blockquote><br>3､ :only-of-type 指定属于父元素的特定类型的唯一子元素的每个 p 元素的样式。:only-of-type 选择器匹配属于其父元素的特定类型的唯一子元素的每个元素。<br><blockquote><pre><code><span>p:only-of-type{ background:#ff0000; }</span></code></pre></blockquote><br>4､ :only-child 规定属于其父元素的唯一子元素的每个 p 元素的样式。:only-child 选择器匹配属于其父元素的唯一子元素的每个元素。<br><blockquote><pre><code><span>p:only-child{ background:#ff0000; } </span></code></pre></blockquote><br>5､ :nth-child(n) 规定属于其父元素的第 n 个子元素的每个 p 元素的样式。:nth-child(n) 选择器匹配属于其父元素的第 N 个子元素，不论元素的类型。n 可以是数字、关键词或公式。<br><blockquote><pre><code><span>p:nth-child(2){ background:#ff0000; }</span></code></pre></blockquote><br>6､ :nth-last-child(n) 规定属于其父元素的第 n 个子元素的每个 p 元素，从最后一个子元素开始计数。<br>:nth-last-child(n) 选择器匹配属于其元素的第 N 个子元素的每个元素，不论元素的类型，从最后一个子元素开始计数。n 可以是数字、关键词或公式。<br><blockquote><pre><code><span>p:nth-last-child(2){ background:#ff0000; }</span></code></pre></blockquote>
       
     </div>
 
