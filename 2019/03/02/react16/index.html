@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="react16的生命周期新引入了三个新的生命周期函数：getDerivedStateFromProps，getSnapshotBeforeUpdate，componentDidCatch,弃用的三个生命周期函数：componentWillMount、componentWillReceivePorps，componentWillUpdate。getDerivedStateFromProps(prop">
+<meta name="description" content="React16的生命周期新引入了三个新的生命周期函数：getDerivedStateFromProps，getSnapshotBeforeUpdate，componentDidCatch,弃用的三个生命周期函数：componentWillMount、componentWillReceivePorps，componentWillUpdate。getDerivedStateFromProps(prop">
 <meta property="og:type" content="article">
-<meta property="og:title" content="react16的生命周期">
+<meta property="og:title" content="React16的生命周期">
 <meta property="og:url" content="https:socat.cc/2019/03/02/react16/index.html">
 <meta property="og:site_name" content="socat">
-<meta property="og:description" content="react16的生命周期新引入了三个新的生命周期函数：getDerivedStateFromProps，getSnapshotBeforeUpdate，componentDidCatch,弃用的三个生命周期函数：componentWillMount、componentWillReceivePorps，componentWillUpdate。getDerivedStateFromProps(prop">
+<meta property="og:description" content="React16的生命周期新引入了三个新的生命周期函数：getDerivedStateFromProps，getSnapshotBeforeUpdate，componentDidCatch,弃用的三个生命周期函数：componentWillMount、componentWillReceivePorps，componentWillUpdate。getDerivedStateFromProps(prop">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-04T05:39:15.797Z">
+<meta property="og:updated_time" content="2020-03-04T05:46:33.376Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react16的生命周期">
-<meta name="twitter:description" content="react16的生命周期新引入了三个新的生命周期函数：getDerivedStateFromProps，getSnapshotBeforeUpdate，componentDidCatch,弃用的三个生命周期函数：componentWillMount、componentWillReceivePorps，componentWillUpdate。getDerivedStateFromProps(prop">
+<meta name="twitter:title" content="React16的生命周期">
+<meta name="twitter:description" content="React16的生命周期新引入了三个新的生命周期函数：getDerivedStateFromProps，getSnapshotBeforeUpdate，componentDidCatch,弃用的三个生命周期函数：componentWillMount、componentWillReceivePorps，componentWillUpdate。getDerivedStateFromProps(prop">
 
 
 
@@ -131,7 +131,7 @@
 
 
 
-  <title> react16的生命周期 | socat </title>
+  <title> React16的生命周期 | socat </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -277,7 +277,7 @@
             
             
               
-                react16的生命周期
+                React16的生命周期
               
             
           </h1>
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/react/" itemprop="url" rel="index">
-                    <span itemprop="name">react</span>
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
                   </a>
                 </span>
 
@@ -350,7 +350,7 @@
       
 
       
-        <p>react16的生命周期新引入了三个新的生命周期函数：getDerivedStateFromProps，getSnapshotBeforeUpdate，componentDidCatch,<br>弃用的三个生命周期函数：componentWillMount、componentWillReceivePorps，componentWillUpdate。<br><span style="font-size: 16px;">getDerivedStateFromProps(props, state)</span><br>该函数在组件挂载阶段和后续更新阶段调用，根据 props 和 state 两个参数，计算出预期的状态改变，返回一个对象表示新的 state进行更新；如果不需要更新，返回 null 即可。<br>该函数用来替代 componentWillReceiveProps。</p>
+        <p>React16的生命周期新引入了三个新的生命周期函数：getDerivedStateFromProps，getSnapshotBeforeUpdate，componentDidCatch,<br>弃用的三个生命周期函数：componentWillMount、componentWillReceivePorps，componentWillUpdate。<br><span style="font-size: 16px;">getDerivedStateFromProps(props, state)</span><br>该函数在组件挂载阶段和后续更新阶段调用，根据 props 和 state 两个参数，计算出预期的状态改变，返回一个对象表示新的 state进行更新；如果不需要更新，返回 null 即可。<br>该函数用来替代 componentWillReceiveProps。</p>
 <blockquote><pre><code><span> yarn add react-lifecycles-compat </span></code></pre></blockquote><br>我们还将发布一个新的npm包react-lifecycles-compat。<br>这个软件包可以填充组件，以便新的getDerivedStateFromProps和getSnapshotBeforeUpdate生命周期也可以与旧版本的React（0.14.9+）一起使用。<br><blockquote><pre><code><span> import React from ‘react’; </span><br><span> import {polyfill} from ‘react-lifecycles-compat’; </span><br><span> class ExampleComponent extends React.Component { </span><br><span> static getDerivedStateFromProps(props, state) { </span><br><span> // Your state update logic here … </span><br><span>  } </span><br><span> } </span><br><span> // Polyfill your component to work with older versions of React: </span><br><span> polyfill(ExampleComponent); </span><br><span> export default ExampleComponent; </span><br></code></pre></blockquote><br><span style="font-size: 16px;">getSnapshotBeforeUpdate(prevProps, prevState)</span><br>该函数在render之后被调用，可以读取但无法使用DOM的时候。它使得组件能在发生更改之前从 DOM 中捕获一些信息(例如，滚动位置)。<br>返回值将作为componentDidUpdate的第三个参数。该函数配合componentDidUpdate, 可以替代componentWillUpdate。<br><span style="font-size: 16px;">static getDerivedStateFromError()</span><br>此生命周期会在后代组件抛出错误后被调用。 它将抛出的错误作为参数，并返回一个值以更新 state。<br><span style="font-size: 16px;">componentDidCatch(error，info)</span><br>任何一处的javascript会触发该函数。<br><span style="font-size: 16px;">组件挂载阶段</span><br><blockquote><pre><code><span> constructor </span><br><span> getDerivedStateFromProps </span><br><span> render </span><br><span> componentDidMount </span><br></code></pre></blockquote><br><span style="font-size: 16px;">组件更新阶段</span><br><blockquote><pre><code><span> getDerivedStateFromProps </span><br><span> shouldComponentUpdate </span><br><span> render </span><br><span> getSnapshotBeforeUpdate </span><br></code> componentDidUpdate </pre></blockquote>
       
     </div>
@@ -471,7 +471,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
