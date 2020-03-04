@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="socat">
 <meta property="og:description" content="共同点：1.都是循环遍历数组中的每一项。2.forEach() 和 map() 里面每一次执行匿名函数都支持3个参数：数组中的当前项item，当前项的索引index，原始数组input。3.匿名函数中的this都是指Window。4.只能遍历数组。 map()：有返回值，可以return 出来。map() 方法返回一个新数组，数组中的元素为原始数组元素调用函数处理后的值。map() 方法按照原始数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-06-23T02:57:20.000Z">
+<meta property="og:updated_time" content="2020-03-04T02:27:07.679Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Array map()和forEach()方法">
 <meta name="twitter:description" content="共同点：1.都是循环遍历数组中的每一项。2.forEach() 和 map() 里面每一次执行匿名函数都支持3个参数：数组中的当前项item，当前项的索引index，原始数组input。3.匿名函数中的this都是指Window。4.只能遍历数组。 map()：有返回值，可以return 出来。map() 方法返回一个新数组，数组中的元素为原始数组元素调用函数处理后的值。map() 方法按照原始数">
@@ -352,9 +352,9 @@
       
         <p>共同点：<br>1.都是循环遍历数组中的每一项。<br>2.forEach() 和 map() 里面每一次执行匿名函数都支持3个参数：数组中的当前项item，当前项的索引index，原始数组input。<br>3.匿名函数中的this都是指Window。<br>4.只能遍历数组。</p>
 <p></p><h2 style="font-size:16px;font-weight:bold;">map()：有返回值，可以return 出来。</h2><br>map() 方法返回一个新数组，数组中的元素为原始数组元素调用函数处理后的值。<br>map() 方法按照原始数组元素顺序依次处理元素。<br>注意： map() 不会对空数组进行检测。map() 不会改变原始数组。<p></p>
-<p><blockquote><pre><code><span>arr[].map(function(value,index,array){</span><br>  <span>return xxx</span><br><span>})</span></code></pre></blockquote><br>参数：value数组中的当前项，index当前项的索引，array原始数组；<br>区别：map的回调函数中支持return返回值；return的是啥，相当于把数组中的这一项变为啥（并不影响原来的数组，只是相当于把原数组克隆一份，把克隆的这一份的数组中的对应项改变了）；</p>
+<p><blockquote><pre><code><span>arr[].map(function(value,index,array){</span><br>  <span>return xxx</span><br><span>})</span></code></pre></blockquote><br>参数：value数组中的当前项，index当前项的索引，array原始数组；<br>区别：map的回调函数中支持return返回值；return的是啥，相当于把数组中的这一项变为啥（并不影响原来的数组，只是相当于把原数组克隆一份，把克隆的这一份的数组中的对应项改变了）；<br>map()适用于你要改变数据值的时候。不仅仅在于它更快，而且返回一个新的数组。这样的优点在于你可以使用复合(composition)(map(), filter(), reduce()等组合使用)来玩出更多的花样。<br>map()会分配内存空间存储新数组并返回，forEach()不会返回数据。</p>
 <p></p><h2 style="font-size:16px;font-weight:bold;">forEach()：没有返回值。</h2><br>forEach() 方法用于调用数组的每个元素，并将元素传递给回调函数。<br>注意: forEach() 对于空数组是不会执行回调函数的。<p></p>
-<p><blockquote><pre><code><span>arr[].forEach(function(value,index,array){</span><br>  <span>//do something</span><br><span>})</span></code></pre></blockquote><br>参数：value数组中的当前项, index当前项的索引, array原始数组；<br>数组中有几项，那么传递进去的匿名回调函数就需要执行几次；<br>理论上这个方法是没有返回值的，仅仅是遍历数组中的每一项，不对原来数组进行修改；但是可以自己通过数组的索引来修改原来的数组；</p>
+<p><blockquote><pre><code><span>arr[].forEach(function(value,index,array){</span><br>  <span>//do something</span><br><span>})</span></code></pre></blockquote><br>参数：value数组中的当前项, index当前项的索引, array原始数组；<br>数组中有几项，那么传递进去的匿名回调函数就需要执行几次；<br>理论上这个方法是没有返回值的，仅仅是遍历数组中的每一项，不对原来数组进行修改；但是可以自己通过数组的索引来修改原来的数组；<br>forEach适合于你并不打算改变数据的时候，而只是想用数据做一些事情 – 比如存入数据库或则打印出来。<br>forEach()允许callback更改原始数组的元素。map()返回新的数组。<br>forEach()的执行速度比map()慢了70%</p>
 
       
     </div>
@@ -477,7 +477,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">40</span>
+                <span class="site-state-item-count">41</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -494,6 +494,15 @@
             </div>
           
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
           
 
         </nav>
@@ -548,7 +557,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
