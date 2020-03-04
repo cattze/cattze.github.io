@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="属性选择器，是对带有指定属性的 HTML 元素设置样式。你可以指定元素的某个属性，还可以指定元素的某个属性和其对应的属性值。一、[attribute] 用于选取带有指定属性的元素选择带有 target 属性的 a 元素设置样式 a[target]{ background-color:yellow; }你也可以使用多属性进行选择元素，title 和 target 同时具有这两属性的元素都将设置样式a">
+<meta name="description" content="属性选择器，是对带有指定属性的 HTML 元素设置样式。你可以指定元素的某个属性，还可以指定元素的某个属性和其对应的属性值。一、[attribute] 用于选取带有指定属性的元素选择带有 target 属性的 a 元素设置样式 a[target]{ background-color:yellow; }你也可以使用多属性进行选择元素，title 和 target 同时具有这两属性的元素都将设置样式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS3 属性选择器">
 <meta property="og:url" content="https:socat.cc/2017/10/21/selectors2/index.html">
 <meta property="og:site_name" content="socat">
-<meta property="og:description" content="属性选择器，是对带有指定属性的 HTML 元素设置样式。你可以指定元素的某个属性，还可以指定元素的某个属性和其对应的属性值。一、[attribute] 用于选取带有指定属性的元素选择带有 target 属性的 a 元素设置样式 a[target]{ background-color:yellow; }你也可以使用多属性进行选择元素，title 和 target 同时具有这两属性的元素都将设置样式a">
+<meta property="og:description" content="属性选择器，是对带有指定属性的 HTML 元素设置样式。你可以指定元素的某个属性，还可以指定元素的某个属性和其对应的属性值。一、[attribute] 用于选取带有指定属性的元素选择带有 target 属性的 a 元素设置样式 a[target]{ background-color:yellow; }你也可以使用多属性进行选择元素，title 和 target 同时具有这两属性的元素都将设置样式">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-01T06:54:28.000Z">
+<meta property="og:updated_time" content="2020-03-04T05:11:40.690Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS3 属性选择器">
-<meta name="twitter:description" content="属性选择器，是对带有指定属性的 HTML 元素设置样式。你可以指定元素的某个属性，还可以指定元素的某个属性和其对应的属性值。一、[attribute] 用于选取带有指定属性的元素选择带有 target 属性的 a 元素设置样式 a[target]{ background-color:yellow; }你也可以使用多属性进行选择元素，title 和 target 同时具有这两属性的元素都将设置样式a">
+<meta name="twitter:description" content="属性选择器，是对带有指定属性的 HTML 元素设置样式。你可以指定元素的某个属性，还可以指定元素的某个属性和其对应的属性值。一、[attribute] 用于选取带有指定属性的元素选择带有 target 属性的 a 元素设置样式 a[target]{ background-color:yellow; }你也可以使用多属性进行选择元素，title 和 target 同时具有这两属性的元素都将设置样式">
 
 
 
@@ -351,7 +351,14 @@
 
       
         <p>属性选择器，是对带有指定属性的 HTML 元素设置样式。你可以指定元素的某个属性，还可以指定元素的某个属性和其对应的属性值。<br>一、[attribute] 用于选取带有指定属性的元素<br>选择带有 target 属性的 a 元素设置样式</p>
-<blockquote><pre><code><span>a[target]{ background-color:yellow; }</span></code></pre></blockquote><br>你也可以使用多属性进行选择元素，title 和 target 同时具有这两属性的元素都将设置样式<br><blockquote><pre><code><span>a[title][target]{ background-color:yellow; }</span></code></pre></blockquote><br>二、[attribute=value] 用于选取带有指定属性和值的元素<br>选择带有 target=”_blank” 的 a 元素设置样式<br><blockquote><pre><code><span>a[target=_blank]{ background-color:yellow; } </span></code></pre></blockquote><br>这种属性选择器是属性值是一个或多个词列表，如果是列表时，他们需要用空格隔开，属性和属性值必须完全匹配。<br>三、[attribute~=value] 用于选取属性值中包含指定词汇的元素<br>选择 titile 属性包含单词 “flower” 的 a 元素，设置样式<br><blockquote><pre><code><span>a[title~=flower]{ background-color:yellow; }</span></code></pre></blockquote><br>这种属性选择器是属性值是一个或多个词列表，如果是列表时，他们需要用空格隔开，只要属性值中有一个value相匹配就可以选中该元素。<br>四、[attribute|=value] 用于选取带有以指定值开头的属性值的元素<br>选择 class 属性值以 “top” 开头的 a 元素设置样式<br><blockquote><pre><code><span>a[class|=top]{ background-color:yellow; }</span></code></pre></blockquote><br>该值必须是整个单词，比如 lang=”en”，或者后面跟着连字符，比如 lang=”en-us”。<br>这个选择器会选择 lang 属性值等于 en 或以 en- 开头的所有元素。<br>五、[attribute^=value] 匹配属性值以指定值开头的每个元素<br>选择 src 属性值以 “https” 开头的所有 a 元素设置样式，所选择的属性，其属性值是以 test 开头的所有元素。<br><blockquote><pre><code><span>a[src^=”https”]{ background:#ffff00; } </span></code></pre></blockquote><br>六、[attribute$=value] 匹配属性值以指定值结尾的每个元素<br>选择 src 属性值以 “.pdf” 结尾的所有 a 元素设置样式，所选择的属性，其属性值是以 test 结尾的所有元素。<br><blockquote><pre><code><span>a[src$=”.pdf”]{ background:#ffff00; }</span></code></pre></blockquote><br>七、[attribute<em>=value] 匹配属性值包含指定值的每个元素<br>选择 class 属性值包含 “test” 的所有 a 元素设置样式，所选择的属性，其属性值中有这个 test 所有元素都将被选中。<br><blockquote><pre><code><span>a[class</span></code></pre></blockquote></em>=”test”]{ background:#ffff00; }
+<p><blockquote><pre><code><span>a[target]{ background-color:yellow; }</span></code></pre></blockquote><br>你也可以使用多属性进行选择元素，title 和 target 同时具有这两属性的元素都将设置样式</p>
+<p><blockquote><pre><code><span>a[title][target]{ background-color:yellow; }</span></code></pre></blockquote><br>二、[attribute=value] 用于选取带有指定属性和值的元素<br>选择带有 target=”_blank” 的 a 元素设置样式</p>
+<p><blockquote><pre><code><span>a[target=_blank]{ background-color:yellow; } </span></code></pre></blockquote><br>这种属性选择器是属性值是一个或多个词列表，如果是列表时，他们需要用空格隔开，属性和属性值必须完全匹配。<br>三、[attribute~=value] 用于选取属性值中包含指定词汇的元素<br>选择 titile 属性包含单词 “flower” 的 a 元素，设置样式</p>
+<p><blockquote><pre><code><span>a[title~=flower]{ background-color:yellow; }</span></code></pre></blockquote><br>这种属性选择器是属性值是一个或多个词列表，如果是列表时，他们需要用空格隔开，只要属性值中有一个value相匹配就可以选中该元素。<br>四、[attribute|=value] 用于选取带有以指定值开头的属性值的元素<br>选择 class 属性值以 “top” 开头的 a 元素设置样式</p>
+<p><blockquote><pre><code><span>a[class|=top]{ background-color:yellow; }</span></code></pre></blockquote><br>该值必须是整个单词，比如 lang=”en”，或者后面跟着连字符，比如 lang=”en-us”。<br>这个选择器会选择 lang 属性值等于 en 或以 en- 开头的所有元素。<br>五、[attribute^=value] 匹配属性值以指定值开头的每个元素<br>选择 src 属性值以 “https” 开头的所有 a 元素设置样式，所选择的属性，其属性值是以 test 开头的所有元素。</p>
+<p><blockquote><pre><code><span>a[src^=”https”]{ background:#ffff00; } </span></code></pre></blockquote><br>六、[attribute$=value] 匹配属性值以指定值结尾的每个元素<br>选择 src 属性值以 “.pdf” 结尾的所有 a 元素设置样式，所选择的属性，其属性值是以 test 结尾的所有元素。</p>
+<p><blockquote><pre><code><span>a[src$=”.pdf”]{ background:#ffff00; }</span></code></pre></blockquote><br>七、[attribute<em>=value] 匹配属性值包含指定值的每个元素<br>选择 class 属性值包含 “test” 的所有 a 元素设置样式，所选择的属性，其属性值中有这个 test 所有元素都将被选中。<br>a[class</em>=”test”]{ background:#ffff00; }</p>
+
       
     </div>
 
@@ -464,7 +471,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">41</span>
+                <span class="site-state-item-count">42</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -475,7 +482,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
