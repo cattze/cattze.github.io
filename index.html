@@ -502,8 +502,8 @@
       
         
           
-          if()if() 是 Sass 的一个内建函数，内置的 if（）函数仅返回两个可能结果中的一个结果。函数的结果可以参考可能未被定义的变量或具有进一步的计算。
- if( $condition, $if_true, $if_false ) if() 函数内的三个参数分别代表: 条件，成功返回值，失败返回值例： @mixin test($condition){  $color: if($condition,blue,red);  color: $color;  }  .First{ @include 
+          if()if() 是 Sass 的一个内建函数，内置的 if（）函数仅返回两个可能结果中的一个结果。
+ if( $condition, $if_true, $if_false ) if() 函数内的三个参数分别代表: 条件，成功返回值，失败返回值例： @mixin test($condition){  $font-size: if($condition, 16px , 14px );  font-size: $font-size;  }  .header{ @include test(true)
           ...
           <!--noindex-->
           <div class="post-button text-right">

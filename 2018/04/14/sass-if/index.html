@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="if()if() 是 Sass 的一个内建函数，内置的 if（）函数仅返回两个可能结果中的一个结果。函数的结果可以参考可能未被定义的变量或具有进一步的计算。  if( $condition, $if_true, $if_false ) if() 函数内的三个参数分别代表: 条件，成功返回值，失败返回值例： @mixin test($condition){  $color: if($conditio">
+<meta name="description" content="if()if() 是 Sass 的一个内建函数，内置的 if（）函数仅返回两个可能结果中的一个结果。  if( $condition, $if_true, $if_false ) if() 函数内的三个参数分别代表: 条件，成功返回值，失败返回值例： @mixin test($condition){  $font-size: if($condition, 16px , 14px );  font-">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sass控制指令 if()">
 <meta property="og:url" content="https:socat.cc/2018/04/14/sass-if/index.html">
 <meta property="og:site_name" content="socat">
-<meta property="og:description" content="if()if() 是 Sass 的一个内建函数，内置的 if（）函数仅返回两个可能结果中的一个结果。函数的结果可以参考可能未被定义的变量或具有进一步的计算。  if( $condition, $if_true, $if_false ) if() 函数内的三个参数分别代表: 条件，成功返回值，失败返回值例： @mixin test($condition){  $color: if($conditio">
+<meta property="og:description" content="if()if() 是 Sass 的一个内建函数，内置的 if（）函数仅返回两个可能结果中的一个结果。  if( $condition, $if_true, $if_false ) if() 函数内的三个参数分别代表: 条件，成功返回值，失败返回值例： @mixin test($condition){  $font-size: if($condition, 16px , 14px );  font-">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-05T02:18:15.202Z">
+<meta property="og:updated_time" content="2020-03-05T02:54:15.142Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sass控制指令 if()">
-<meta name="twitter:description" content="if()if() 是 Sass 的一个内建函数，内置的 if（）函数仅返回两个可能结果中的一个结果。函数的结果可以参考可能未被定义的变量或具有进一步的计算。  if( $condition, $if_true, $if_false ) if() 函数内的三个参数分别代表: 条件，成功返回值，失败返回值例： @mixin test($condition){  $color: if($conditio">
+<meta name="twitter:description" content="if()if() 是 Sass 的一个内建函数，内置的 if（）函数仅返回两个可能结果中的一个结果。  if( $condition, $if_true, $if_false ) if() 函数内的三个参数分别代表: 条件，成功返回值，失败返回值例： @mixin test($condition){  $font-size: if($condition, 16px , 14px );  font-">
 
 
 
@@ -350,8 +350,8 @@
       
 
       
-        <p><span style="font-size: 16px;font-weight: bold;">if()</span><br>if() 是 Sass 的一个内建函数，内置的 if（）函数仅返回两个可能结果中的一个结果。函数的结果可以参考可能未被定义的变量或具有进一步的计算。</p>
-<blockquote><pre><code><span> if( $condition, $if_true, $if_false ) </span></code></pre></blockquote><br>if() 函数内的三个参数分别代表: 条件，成功返回值，失败返回值<br>例：<br><blockquote><pre><code><br><span> @mixin test($condition){ </span><br><span> $color: if($condition,blue,red); </span><br><span> color: $color; </span><br><span> } </span><br><span> .First{ @include test(true); } </span><br><span> .Second{ @include test(false); }</span><br><span></span><br>编译结果为:<br></code></pre></blockquote><br><blockquote><pre><code><br><span> .First { color: blue; }</span><br><span> .Second { color: red; }</span><br><span></span><br></code></pre></blockquote>
+        <p><span style="font-size: 16px;font-weight: bold;">if()</span><br>if() 是 Sass 的一个内建函数，内置的 if（）函数仅返回两个可能结果中的一个结果。</p>
+<blockquote><pre><code><span> if( $condition, $if_true, $if_false ) </span></code></pre></blockquote><br>if() 函数内的三个参数分别代表: 条件，成功返回值，失败返回值<br>例：<br><blockquote><pre><code><br><span> @mixin test($condition){ </span><br><span> $font-size: if($condition, 16px , 14px ); </span><br><span> font-size: $font-size; </span><br><span> } </span><br><span> .header{ @include test(true); } </span><br><span> .footer{ @include test(false); }</span><br><span></span><br></code></pre></blockquote><br>编译结果为:<br><blockquote><pre><code><br><span> .header { font-size: 16px; }</span><br><span> .footer { font-size: 14px; }</span><br><span></span><br></code></pre></blockquote><br><span style="font-size: 16px;font-weight: bold;">@if</span><br>当 @if 的表达式返回值不是 false 或者 null 时，条件成立，输出 {} 内的代码：<br><blockquote><pre><code><br><span> @mixin test($weight) { </span><br><span> color: white; </span><br><span> @if $weight == bold { font-weight: bold;} </span><br><span> } </span><br><span> .header { @include test(none); } </span><br><span> .footer { @include test(bold); } </span><br><span> </span><br></code></pre></blockquote><br>编译结果为:<br><blockquote><pre><code><br><span> .header { color: white; }</span><br><span> .footer { color: white;font-weight: bold; }</span><br><span></span><br></code></pre></blockquote><br>@if 声明后面可以跟多个 @else if 声明，或者一个 @else 声明。如果 @if 声明失败，Sass 将逐条执行 @else if 声明，如果全部失败，最后执行 @else 声明。<br><blockquote><pre><code><br><span> @mixin test($weight) { </span><br><span> color: white; </span><br><span> @if $weight == bold { font-weight: bold;} </span><br><span> @else if $weight == light { font-weight: 100;} </span><br><span> @else { font-weight: normal;} </span><br><span> } </span><br><span> .header { @include test(bold); } </span><br><span> .footer { @include test(light); } </span><br><span> .main { @include test(none); } </span><br><span> .content { @include test(normal); } </span><br><span> </span><br></code></pre></blockquote><br>编译结果为:<br><blockquote><pre><code><br><span> .header { color: white;font-weight: bold; }</span><br><span> .footer { color: white;font-weight: 100; }</span><br><span> .main { color: white;font-weight: normal; }</span><br><span> .content { color: white;font-weight: normal; }</span><br><span></span><br></code></pre></blockquote>
       
     </div>
 
