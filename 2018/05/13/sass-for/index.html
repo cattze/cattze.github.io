@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="@for@for 指令可以在限制的范围内重复输出格式，每次按要求（变量的值）对输出结果做出变动。这个指令包含两种格式：@for $var from  through ，或者 @for $var from  to ，区别在于 through 与 to 的含义：当使用 through 时，条件范围包含  与  的值，而使用 to 时条件范围只包含  的值不包含  的值。另外，$var 可以是任何变量，">
+<meta name="description" content="@for@for 指令可以在限制的范围内重复输出格式，每次按要求（变量的值）对输出结果做出变动。这个指令包含两种格式：@for $var from &amp;lt;start&amp;gt; through &amp;lt;end&amp;gt;，或者 @for $var from &amp;lt;start&amp;gt; to &amp;lt;end&amp;gt;，区别在于 through 与 to 的含义：当使用 through 时，条件范围包含  与">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sass控制指令 @for">
 <meta property="og:url" content="https:socat.cc/2018/05/13/sass-for/index.html">
 <meta property="og:site_name" content="socat">
-<meta property="og:description" content="@for@for 指令可以在限制的范围内重复输出格式，每次按要求（变量的值）对输出结果做出变动。这个指令包含两种格式：@for $var from  through ，或者 @for $var from  to ，区别在于 through 与 to 的含义：当使用 through 时，条件范围包含  与  的值，而使用 to 时条件范围只包含  的值不包含  的值。另外，$var 可以是任何变量，">
+<meta property="og:description" content="@for@for 指令可以在限制的范围内重复输出格式，每次按要求（变量的值）对输出结果做出变动。这个指令包含两种格式：@for $var from &amp;lt;start&amp;gt; through &amp;lt;end&amp;gt;，或者 @for $var from &amp;lt;start&amp;gt; to &amp;lt;end&amp;gt;，区别在于 through 与 to 的含义：当使用 through 时，条件范围包含  与">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-05T02:59:52.250Z">
+<meta property="og:updated_time" content="2020-03-05T03:07:22.584Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sass控制指令 @for">
-<meta name="twitter:description" content="@for@for 指令可以在限制的范围内重复输出格式，每次按要求（变量的值）对输出结果做出变动。这个指令包含两种格式：@for $var from  through ，或者 @for $var from  to ，区别在于 through 与 to 的含义：当使用 through 时，条件范围包含  与  的值，而使用 to 时条件范围只包含  的值不包含  的值。另外，$var 可以是任何变量，">
+<meta name="twitter:description" content="@for@for 指令可以在限制的范围内重复输出格式，每次按要求（变量的值）对输出结果做出变动。这个指令包含两种格式：@for $var from &amp;lt;start&amp;gt; through &amp;lt;end&amp;gt;，或者 @for $var from &amp;lt;start&amp;gt; to &amp;lt;end&amp;gt;，区别在于 through 与 to 的含义：当使用 through 时，条件范围包含  与">
 
 
 
@@ -350,8 +350,8 @@
       
 
       
-        <p><span style="font-size: 16px;font-weight: bold;">@for</span><br>@for 指令可以在限制的范围内重复输出格式，每次按要求（变量的值）对输出结果做出变动。这个指令包含两种格式：@for $var from <start> through <end>，或者 @for $var from <start> to <end>，区别在于 through 与 to 的含义：当使用 through 时，条件范围包含 <start> 与 <end> 的值，而使用 to 时条件范围只包含 <start> 的值不包含 <end> 的值。另外，$var 可以是任何变量，比如 $i；<start> 和 <end> 必须是整数值。</end></start></end></start></end></start></end></start></end></start></p>
-
+        <p><span style="font-size: 16px;font-weight: bold;">@for</span><br>@for 指令可以在限制的范围内重复输出格式，每次按要求（变量的值）对输出结果做出变动。这个指令包含两种格式：@for $var from <span>&lt;start&gt;</span> through <span>&lt;end&gt;</span>，或者 @for $var from <span>&lt;start&gt;</span> to <span>&lt;end&gt;</span>，区别在于 through 与 to 的含义：当使用 through 时，条件范围包含 <start&gt;< span=""> 与 <end&gt;< span=""> 的值，而使用 to 时条件范围只包含 <span>&lt;start&gt;</span> 的值不包含 <span>&lt;end&gt;</span> 的值。另外，$var 可以是任何变量，比如 $i；<span>&lt;start&gt;</span> 和 <span>&lt;end&gt;</span>必须是整数值。</end&gt;<></start&gt;<></p>
+<blockquote><pre><code><br><span> @for $i from 1 through 3 { </span><br><span> .item-#{$i} { width: 2em * $i; } </span><br><span> } </span><br><span></span><br></code></pre></blockquote><br>编译结果为:<br><blockquote><pre><code><br><span> .item-1 { width: 2em; } </span><br><span> .item-2 { width: 4em; } </span><br><span> .item-3 { width: 6em; } </span><br><span></span><br></code></pre></blockquote>
       
     </div>
 
