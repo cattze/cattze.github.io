@@ -87,23 +87,17 @@
 
 
 
-<meta name="description" content="1､lineCap 属性lineCap 属性设置或返回线条末端线帽的样式。注意：”round” 和 “square” 值会使线条略微变长。butt 默认。向线条的每个末端添加平直的边缘。round 向线条的每个末端添加圆形线帽。square  向线条的每个末端添加正方形线帽。   //butt  ctx.lineWidth = 10;  ctx.beginPath();  ctx.lineCap">
+<meta name="description" content="Refs 提供了一种方式，允许我们访问 DOM 节点或在 render 方法中创建的 React 元素。在典型的 React 数据流中，props 是父组件与子组件交互的唯一方式。要修改一个子组件，你需要使用新的 props 来重新渲染它。但是，在某些情况下，你需要在典型数据流之外强制修改子组件。被修改的子组件可能是一个 React 组件的实例，也可能是一个 DOM 元素。适合使用 refs 的情">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Canvas 线性">
-<meta property="og:url" content="https:socat.cc/2017/05/13/line/index.html">
+<meta property="og:title" content="React之Refs">
+<meta property="og:url" content="https:socat.cc/2019/04/20/react-refs/index.html">
 <meta property="og:site_name" content="socat">
-<meta property="og:description" content="1､lineCap 属性lineCap 属性设置或返回线条末端线帽的样式。注意：”round” 和 “square” 值会使线条略微变长。butt 默认。向线条的每个末端添加平直的边缘。round 向线条的每个末端添加圆形线帽。square  向线条的每个末端添加正方形线帽。   //butt  ctx.lineWidth = 10;  ctx.beginPath();  ctx.lineCap">
+<meta property="og:description" content="Refs 提供了一种方式，允许我们访问 DOM 节点或在 render 方法中创建的 React 元素。在典型的 React 数据流中，props 是父组件与子组件交互的唯一方式。要修改一个子组件，你需要使用新的 props 来重新渲染它。但是，在某些情况下，你需要在典型数据流之外强制修改子组件。被修改的子组件可能是一个 React 组件的实例，也可能是一个 DOM 元素。适合使用 refs 的情">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oo6ltjdyl.bkt.clouddn.com/2345.jpg">
-<meta property="og:image" content="http://oo6ltjdyl.bkt.clouddn.com/23456.jpg">
-<meta property="og:image" content="http://oo6ltjdyl.bkt.clouddn.com/13456.png">
-<meta property="og:image" content="http://oo6ltjdyl.bkt.clouddn.com/img_miterlimitFig.gif">
-<meta property="og:image" content="http://oo6ltjdyl.bkt.clouddn.com/img_miterlimitBevelFig.gif">
-<meta property="og:updated_time" content="2017-06-30T07:56:02.000Z">
+<meta property="og:updated_time" content="2020-03-10T06:15:25.923Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Canvas 线性">
-<meta name="twitter:description" content="1､lineCap 属性lineCap 属性设置或返回线条末端线帽的样式。注意：”round” 和 “square” 值会使线条略微变长。butt 默认。向线条的每个末端添加平直的边缘。round 向线条的每个末端添加圆形线帽。square  向线条的每个末端添加正方形线帽。   //butt  ctx.lineWidth = 10;  ctx.beginPath();  ctx.lineCap">
-<meta name="twitter:image" content="http://oo6ltjdyl.bkt.clouddn.com/2345.jpg">
+<meta name="twitter:title" content="React之Refs">
+<meta name="twitter:description" content="Refs 提供了一种方式，允许我们访问 DOM 节点或在 render 方法中创建的 React 元素。在典型的 React 数据流中，props 是父组件与子组件交互的唯一方式。要修改一个子组件，你需要使用新的 props 来重新渲染它。但是，在某些情况下，你需要在典型数据流之外强制修改子组件。被修改的子组件可能是一个 React 组件的实例，也可能是一个 DOM 元素。适合使用 refs 的情">
 
 
 
@@ -131,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https:socat.cc/2017/05/13/line/"/>
+  <link rel="canonical" href="https:socat.cc/2019/04/20/react-refs/"/>
 
 
 
 
 
-  <title> Canvas 线性 | socat </title>
+  <title> React之Refs | socat </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -262,7 +256,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https:socat.cc/2017/05/13/line/">
+    <link itemprop="mainEntityOfPage" href="https:socat.cc/2019/04/20/react-refs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="socat">
@@ -283,7 +277,7 @@
             
             
               
-                Canvas 线性
+                React之Refs
               
             
           </h1>
@@ -298,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-13T00:00:00+08:00">
-                2017-05-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-20T00:00:00+08:00">
+                2019-04-20
               </time>
             
 
@@ -321,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/canvas/" itemprop="url" rel="index">
-                    <span itemprop="name">canvas</span>
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
                   </a>
                 </span>
 
@@ -356,10 +350,7 @@
       
 
       
-        <p><span style="font-size:16px;font-weigh:bold;">1､lineCap 属性</span><br>lineCap 属性设置或返回线条末端线帽的样式。<br>注意：”round” 和 “square” 值会使线条略微变长。<br>butt 默认。向线条的每个末端添加平直的边缘。<br>round 向线条的每个末端添加圆形线帽。<br>square  向线条的每个末端添加正方形线帽。</p>
-<p><blockquote><pre><code><br>  <span>//butt</span><br>  <span>ctx.lineWidth = 10;</span><br>  <span>ctx.beginPath();</span><br>  <span>ctx.lineCap = ‘butt’;</span><br>  <span>ctx.moveTo(60, 30);</span><br>  <span>ctx.lineTo(200, 30);</span><br>  <span>ctx.fillText(‘butt’, 10, 35);</span><br>  <span>ctx.stroke();</span><br>  <span>//round</span><br>  <span>ctx.lineWidth = 10;</span><br>  <span>ctx.beginPath();</span><br>  <span>ctx.lineCap = ‘round’;</span><br>  <span>ctx.moveTo(60, 60);</span><br>  <span>ctx.lineTo(200, 60);</span><br>  <span>ctx.fillText(‘round’, 10, 65);</span><br>  <span>ctx.stroke();</span><br>  <span>//square</span><br>  <span>ctx.lineWidth = 10;</span><br>  <span>ctx.beginPath();</span><br>  <span>ctx.lineCap = ‘square’;</span><br>  <span>ctx.moveTo(60, 90);</span><br>  <span>ctx.lineTo(200, 90);</span><br>  <span>ctx.fillText(‘square’, 10, 95);</span><br>  <span> ctx.stroke();</span><br></code></pre></blockquote><br><img src="http://oo6ltjdyl.bkt.clouddn.com/2345.jpg" alt=""><br><span style="font-size:16px;font-weigh:bold;">2､lineJoin 属性</span><br>lineJoin 属性设置或返回所创建边角的类型，当两条线交汇时。<br>注意：”miter” 值受 miterLimit 属性的影响。<br>bevel 创建斜角。<br>round 创建圆角。<br>miter 默认。创建尖角。</p>
-<p><blockquote><pre><code><br>  <span>//miter</span><br>  <span>ctx.lineWidth = 10;</span><br>  <span>ctx.beginPath();</span><br>  <span>ctx.lineJoin = ‘miter’;</span><br>  <span>ctx.moveTo(60, 30);</span><br>  <span>ctx.lineTo(100, 30);</span><br>  <span>ctx.lineTo(100, 100);</span><br>  <span>ctx.fillText(‘miter’, 10, 35);</span><br>  <span>ctx.stroke();</span><br>  <span>//round</span><br>  <span>ctx.lineWidth = 10;</span><br>  <span>ctx.beginPath();</span><br>  <span>ctx.lineJoin = ‘round’;</span><br>  <span>ctx.moveTo(160, 30);</span><br>  <span>ctx.lineTo(200, 30);</span><br>  <span>ctx.lineTo(200, 100);</span><br>  <span>ctx.fillText(‘round’, 120, 35);</span><br>  <span>ctx.stroke();</span><br>  <span>//bevel</span><br>  <span>ctx.lineWidth = 10;</span><br>  <span>ctx.beginPath();</span><br>  <span>ctx.lineJoin = ‘bevel’;</span><br>  <span>ctx.moveTo(260, 30);</span><br>  <span>ctx.lineTo(300, 30);</span><br>  <span>ctx.lineTo(300, 100);</span><br>  <span>ctx.fillText(‘bevel’, 220, 35);</span><br>  <span>ctx.stroke();</span><br></code></pre></blockquote><br><img src="http://oo6ltjdyl.bkt.clouddn.com/23456.jpg" alt=""><br><span style="font-size:16px;font-weigh:bold;">3､lineWidth 属性</span><br>lineWidth 属性设置或返回当前线条的宽度，以像素计。<br>线宽是指给定路径的中心到两边的粗细。就是在路径的两边各绘制线宽的一半。<br>在Canvas中绘制1个像素的线条时，坐标位置需要错开0.5个像素。<br>在Canvas中绘制路径（线段）时，后面显式设置的lineWidth会覆盖前面的值。<br><span style="font-size:16px;font-weigh:bold;">4､miterLimit 属性</span><br>默认值：10, number 正数。规定最大斜接长度。如果斜接长度超过 miterLimit 的值，边角会以 lineJoin 的 “bevel” 类型来显示。以最大斜接长度 5 绘制线条：</p>
-<p><blockquote><pre><code><br>  <span>ctx.lineWidth=10;</span><br>  <span>ctx.lineJoin=”miter”;</span><br>  <span>ctx.miterLimit=5;</span><br>  <span>ctx.moveTo(20,20);</span><br>  <span>ctx.lineTo(50,27);</span><br>  <span>ctx.lineTo(20,34);</span><br>  <span>ctx.stroke();</span><br></code></pre></blockquote><br><img src="http://oo6ltjdyl.bkt.clouddn.com/13456.png" alt=""><br>miterLimit 属性设置或返回最大斜接长度。<br>斜接长度指的是在两条线交汇处内角和外角之间的距离。<br><img src="http://oo6ltjdyl.bkt.clouddn.com/img_miterlimitFig.gif" alt=""><br>提示：只有当 lineJoin 属性为 “miter” 时，miterLimit 才有效。<br>边角的角度越小，斜接长度就会越大。<br>为了避免斜接长度过长，我们可以使用 miterLimit 属性。<br>如果斜接长度超过 miterLimit 的值，边角会以 lineJoin 的 “bevel” 类型来显示（Fig 3）<br><img src="http://oo6ltjdyl.bkt.clouddn.com/img_miterlimitBevelFig.gif" alt=""></p>
+        <p>Refs 提供了一种方式，允许我们访问 DOM 节点或在 render 方法中创建的 React 元素。<br>在典型的 React 数据流中，props 是父组件与子组件交互的唯一方式。要修改一个子组件，你需要使用新的 props 来重新渲染它。但是，在某些情况下，你需要在典型数据流之外强制修改子组件。被修改的子组件可能是一个 React 组件的实例，也可能是一个 DOM 元素。<br><span style="font-size:18px;font-weight:bold;">适合使用 refs 的情况：</span><br>1) 管理焦点，文本选择或媒体播放。<br>2) 触发强制动画。<br>3) 集成第三方 DOM 库。<br><span style="color:red;font-weight:bold;">在 React 16.3 版本引入的 React.createRef() API。如果你正在使用一个较早版本的 React，推荐你使用回调形式的 refs。</span></p>
 
       
     </div>
@@ -396,8 +387,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/23/mls/" rel="next" title="每一次的马拉松，只为更好的自己">
-                <i class="fa fa-chevron-left"></i> 每一次的马拉松，只为更好的自己
+              <a href="/2019/03/02/react16/" rel="next" title="React16的生命周期">
+                <i class="fa fa-chevron-left"></i> React16的生命周期
               </a>
             
           </div>
@@ -405,10 +396,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/19/arc/" rel="prev" title="Canvas 圆形">
-                Canvas 圆形 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
