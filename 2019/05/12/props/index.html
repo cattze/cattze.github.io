@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="高阶组件就是一个 React 组件包裹着另外一个 React 组件。高阶组件中所谓的包裹方式主要有以下两种：1､ Props Proxy: 高阶组件通过WrappedComponent中的props来进行相关的操作。2､ Inheritance Inversion: 高阶组件继承自WrappedComponent。 function ppHOC(WrappedComponent) {  retur">
+<meta name="description" content="在 React 中组件的数据存储在 Props 和 State 中。Props 是组件的固有属性，它是不会改变的，而 State 是组件创建后才有的，它是可以改变的。没有State的叫做无状态组件，有State的叫做有状态组件。多用 Props，少用 State。所有 React 组件都必须像纯函数一样保护它们的 Props 不被更改。State: 如果 UI 需要更改就表示某处肯定会有 stat">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React 高阶组件">
-<meta property="og:url" content="https:socat.cc/2017/03/17/high-order/index.html">
+<meta property="og:title" content="React之 Props, State">
+<meta property="og:url" content="https:socat.cc/2019/05/12/props/index.html">
 <meta property="og:site_name" content="socat">
-<meta property="og:description" content="高阶组件就是一个 React 组件包裹着另外一个 React 组件。高阶组件中所谓的包裹方式主要有以下两种：1､ Props Proxy: 高阶组件通过WrappedComponent中的props来进行相关的操作。2､ Inheritance Inversion: 高阶组件继承自WrappedComponent。 function ppHOC(WrappedComponent) {  retur">
+<meta property="og:description" content="在 React 中组件的数据存储在 Props 和 State 中。Props 是组件的固有属性，它是不会改变的，而 State 是组件创建后才有的，它是可以改变的。没有State的叫做无状态组件，有State的叫做有状态组件。多用 Props，少用 State。所有 React 组件都必须像纯函数一样保护它们的 Props 不被更改。State: 如果 UI 需要更改就表示某处肯定会有 stat">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-06-23T02:57:31.000Z">
+<meta property="og:updated_time" content="2020-03-18T06:31:12.011Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React 高阶组件">
-<meta name="twitter:description" content="高阶组件就是一个 React 组件包裹着另外一个 React 组件。高阶组件中所谓的包裹方式主要有以下两种：1､ Props Proxy: 高阶组件通过WrappedComponent中的props来进行相关的操作。2､ Inheritance Inversion: 高阶组件继承自WrappedComponent。 function ppHOC(WrappedComponent) {  retur">
+<meta name="twitter:title" content="React之 Props, State">
+<meta name="twitter:description" content="在 React 中组件的数据存储在 Props 和 State 中。Props 是组件的固有属性，它是不会改变的，而 State 是组件创建后才有的，它是可以改变的。没有State的叫做无状态组件，有State的叫做有状态组件。多用 Props，少用 State。所有 React 组件都必须像纯函数一样保护它们的 Props 不被更改。State: 如果 UI 需要更改就表示某处肯定会有 stat">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https:socat.cc/2017/03/17/high-order/"/>
+  <link rel="canonical" href="https:socat.cc/2019/05/12/props/"/>
 
 
 
 
 
-  <title> React 高阶组件 | socat </title>
+  <title> React之 Props, State | socat </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -256,7 +256,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https:socat.cc/2017/03/17/high-order/">
+    <link itemprop="mainEntityOfPage" href="https:socat.cc/2019/05/12/props/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="socat">
@@ -277,7 +277,7 @@
             
             
               
-                React 高阶组件
+                React之 Props, State
               
             
           </h1>
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T00:00:00+08:00">
-                2017-03-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-12T00:00:00+08:00">
+                2019-05-12
               </time>
             
 
@@ -350,8 +350,12 @@
       
 
       
-        <p>高阶组件就是一个 React 组件包裹着另外一个 React 组件。<br>高阶组件中所谓的包裹方式主要有以下两种：<br>1､ Props Proxy: 高阶组件通过WrappedComponent中的props来进行相关的操作。<br>2､ Inheritance Inversion: 高阶组件继承自WrappedComponent。</p>
-<blockquote><pre><code><span>function ppHOC(WrappedComponent) {</span><br>  <span>return class PP extends React.Component {</span><br>    <span>render() {</span><br>      <span>return &lt;WrappedComponent {…this.props}/&gt;</span><br>    <span>}</span><br>  <span>}</span><br><span>}</span></code></pre></blockquote><br>这里主要是 HOC 在 render 方法中 返回 了一个 WrappedComponent 类型的 React Element。我们还传入了 HOC 接收到的 props，这就是名字 Props Proxy 的由来。<br><span style="font-size:18px;font-weight:bold;">高阶组件中的props、ref、state</span><br><span style="font-size:16px;font-weight:bold;">操作props</span><br>你可以在高阶组件中对ComponentClass中的props进行读取、添加、编辑操作。<br><blockquote><pre><code><span>function ppHOC(WrappedComponent) {</span><br>  <span>return class PP extends React.Component {</span><br>    <span>render() {</span><br>      <span>const newProps = {</span><br>        <span>name: “cqm”,</span><br>        <span>value: “testData”,</span><br>      <span>}</span><br>      <span>return &lt;WrappedComponent {…this.props} {…newProps}/&gt;</span><br>    <span>}</span><br>  <span>}</span><br><span>}</span></code></pre></blockquote><br>高阶组件中能够通过this.props直接获取到WrappedComponent中的props，假设this.props中有name，那么newProps中的name会覆盖掉this.props中的name。<br><span style="font-size:16px;font-weight:bold;">通过ref访问组件实例</span><br><blockquote><pre><code><span>function ppHOC(WrappedComponent) {</span><br>  <span>return class PP extends React.Component {</span><br>    <span>componentDidMount() {</span><br>      <span>console.log(this.refs.WrappedComponent);</span><br>    <span>}</span><br>    <span>render() {</span><br>      <span>return &lt;WrappedComponent ref=”WrappedComponent” /&gt;</span><br>    <span>}</span><br>  <span>}</span><br><span>}</span></code></pre></blockquote><br><span style="font-size:16px;font-weight:bold;">获取state</span><br>你可以往ComponentClass中传入一个函数，之后ComponentClass中通过props拿到这个函数，往里面传入你想要的state参数。<br><blockquote><pre><code><span>function ppHOC(WrappedComponent) {</span><br>  <span>return class PP extends React.Component {</span><br>    <span>constructor(props) {</span><br>      <span>super(props)</span><br>        <span>this.state = { name: ‘’ }</span><br>        <span>this.onNameChange = this.onNameChange.bind(this)</span><br>      <span>}</span><br>      <span>onNameChange(event) {</span><br>        <span>this.setState({ name: event.target.value })</span><br>      <span>}</span><br>      <span>render() {</span><br>        <span>const newProps = {</span><br>          <span>name: {</span><br>            <span>value: this.state.name,</span><br>            <span>onChange: this.onNameChange</span><br>          <span>}</span><br>        <span>}</span><br>        <span>return <wrappedcomponent {...this.props}="" {...newprops}=""></wrappedcomponent></span><br>    <span>}</span><br>  <span>}</span><br><span>}</span></code></pre></blockquote><br><blockquote><pre><code><span>class WrappedComponent extends React.Component {</span><br>  <span>render() {</span><br>    <span>return &lt;input name=”name” {…this.props.name}/&gt;</span><br>  <span>}</span><br><span>}</span></code></pre></blockquote>
+        <p>在 React 中组件的数据存储在 Props 和 State 中。<br>Props 是组件的固有属性，它是不会改变的，而 State 是组件创建后才有的，它是可以改变的。<br>没有State的叫做无状态组件，有State的叫做有状态组件。多用 Props，少用 State。<br><span style="color:red">所有 React 组件都必须像纯函数一样保护它们的 Props 不被更改。</span><br>State: 如果 UI 需要更改就表示某处肯定会有 state。<br>Props: 用来传递数据、传递控制。<br><span style="font-size:18px;font-weight:bold;">Props</span><br>如果你想在构造函数中只用this，就必须先调用 super。Props用来向下传递数据的东西，还可以用来向下传递控制。</p>
+<p><blockquote><pre><code><br><span>  constructor(props) { </span><br><span>   super(props); </span><br><span>  }</span><br></code></pre></blockquote><br>Props 是一个组件的输入。他经常被用作渲染组件和初始化状态。当实例化完一个组件，Props 应该是不可变的（持久的）。Props 被用作在实例化组件的时候，然后组件将再次渲染 DOM，在这个过程中，React 将会对比新 Props 和老 Props 然后来确定哪些 DOM 的变化是必要的。<br><span style="font-size:18px;font-weight:bold;">State</span><br>(1) 不要直接修改 State，而是应该使用 setState()。</p>
+<p><blockquote><pre><code><br><span>  this.setState({comment: ‘Hello’}); </span><br></code></pre></blockquote><br>(2) State 的更新可能是异步的，可以让 setState() 接收一个函数而不是一个对象。这个函数用上一个 state 作为第一个参数，将此次更新被应用时的 props 做为第二个参数。</p>
+<p><blockquote><pre><code><br><span>  this.setState((state, props) =&gt; ({ </span><br><span>    counter: state.counter + props.increment </span><br><span>  }));</span><br></code></pre></blockquote><br>(3) State 的更新会被合并，可以分别调用 setState() 来单独地更新它们。</p>
+<p>React 组件对数据提供了两种机制： Props 与 State。他把数据清楚的划分为了持久性数据 Props 与经常改变的数据 State，然后把这两种数据和组件产生关联。<br>Props 和 State 之间的关系促成了数据通过组件的流动。Props 可以用来初始化 State，State 可以在初始化、渲染组件的使用设置 Props。通过 State 来捕获用户输出的值、更新 Props。</p>
+
       
     </div>
 
@@ -387,8 +391,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/03/react-redux/" rel="next" title="react 和 redux 的应用">
-                <i class="fa fa-chevron-left"></i> react 和 redux 的应用
+              <a href="/2019/04/20/react-refs/" rel="next" title="React之Refs">
+                <i class="fa fa-chevron-left"></i> React之Refs
               </a>
             
           </div>
@@ -397,8 +401,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/15/foreach/" rel="prev" title="Array map()和forEach()方法">
-                Array map()和forEach()方法 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/05/15/poonHill/" rel="prev" title="【尼泊尔】PoonHill徒步，等风来">
+                【尼泊尔】PoonHill徒步，等风来 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
