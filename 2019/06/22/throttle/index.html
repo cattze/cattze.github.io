@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="一、锚点伪类1､ :link 选择未被访问的链接，并设置其样式。:link 选择器不会设置已经访问过的链接的样式。 a:link{ background-color:yellow; }2､ :visited 选择已访问的链接，并设置其样式。a:visited{ background-color:yellow; }3､ :active 选择活动链接，并设置其样式。当您在一个链接上点击时，它就会成为活">
+<meta name="description" content="什么是节流函数节流(throttle)：任务频繁触发的情况下，指定时间间隔内只会执行一次任务；应用场景：鼠标不断点击触发，mousedown(单位时间内只触发一次)监听滚动事件，比如是否滑到底部自动加载更多，用throttle来判断实现：   /     @param {function} fun 调用函数     @param {number} delay 延迟调用时间     @param {">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS3 伪类选择器">
-<meta property="og:url" content="https:socat.cc/2017/11/03/selectors3/index.html">
+<meta property="og:title" content="节流和防抖函数">
+<meta property="og:url" content="https:socat.cc/2019/06/22/throttle/index.html">
 <meta property="og:site_name" content="socat">
-<meta property="og:description" content="一、锚点伪类1､ :link 选择未被访问的链接，并设置其样式。:link 选择器不会设置已经访问过的链接的样式。 a:link{ background-color:yellow; }2､ :visited 选择已访问的链接，并设置其样式。a:visited{ background-color:yellow; }3､ :active 选择活动链接，并设置其样式。当您在一个链接上点击时，它就会成为活">
+<meta property="og:description" content="什么是节流函数节流(throttle)：任务频繁触发的情况下，指定时间间隔内只会执行一次任务；应用场景：鼠标不断点击触发，mousedown(单位时间内只触发一次)监听滚动事件，比如是否滑到底部自动加载更多，用throttle来判断实现：   /     @param {function} fun 调用函数     @param {number} delay 延迟调用时间     @param {">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-03T07:56:29.000Z">
+<meta property="og:updated_time" content="2020-03-20T01:49:06.054Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS3 伪类选择器">
-<meta name="twitter:description" content="一、锚点伪类1､ :link 选择未被访问的链接，并设置其样式。:link 选择器不会设置已经访问过的链接的样式。 a:link{ background-color:yellow; }2､ :visited 选择已访问的链接，并设置其样式。a:visited{ background-color:yellow; }3､ :active 选择活动链接，并设置其样式。当您在一个链接上点击时，它就会成为活">
+<meta name="twitter:title" content="节流和防抖函数">
+<meta name="twitter:description" content="什么是节流函数节流(throttle)：任务频繁触发的情况下，指定时间间隔内只会执行一次任务；应用场景：鼠标不断点击触发，mousedown(单位时间内只触发一次)监听滚动事件，比如是否滑到底部自动加载更多，用throttle来判断实现：   /     @param {function} fun 调用函数     @param {number} delay 延迟调用时间     @param {">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https:socat.cc/2017/11/03/selectors3/"/>
+  <link rel="canonical" href="https:socat.cc/2019/06/22/throttle/"/>
 
 
 
 
 
-  <title> CSS3 伪类选择器 | socat </title>
+  <title> 节流和防抖函数 | socat </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -256,7 +256,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https:socat.cc/2017/11/03/selectors3/">
+    <link itemprop="mainEntityOfPage" href="https:socat.cc/2019/06/22/throttle/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="socat">
@@ -277,7 +277,7 @@
             
             
               
-                CSS3 伪类选择器
+                节流和防抖函数
               
             
           </h1>
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-03T00:00:00+08:00">
-                2017-11-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-22T00:00:00+08:00">
+                2019-06-22
               </time>
             
 
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS3/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS3</span>
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
                   </a>
                 </span>
 
@@ -350,8 +350,8 @@
       
 
       
-        <p>一、锚点伪类<br>1､ :link 选择未被访问的链接，并设置其样式。:link 选择器不会设置已经访问过的链接的样式。</p>
-<blockquote><pre><code><span>a:link{ background-color:yellow; }</span></code></pre></blockquote><br>2､ :visited 选择已访问的链接，并设置其样式。<br><blockquote><pre><code><span>a:visited{ background-color:yellow; }</span></code></pre></blockquote><br>3､ :active 选择活动链接，并设置其样式。当您在一个链接上点击时，它就会成为活动的（激活的）。<br><blockquote><pre><code><span>a:active{ background-color:yellow; }</span></code></pre></blockquote><br>4､ :hover 选择鼠标指针浮动在其上的元素，并设置其样式。:hover 选择器可用于所有元素，不只是链接。<br><blockquote><pre><code><span>a:hover{ background-color:yellow; }</span></code></pre></blockquote><br>5､ :focus 选择获得焦点的输入字段，并设置其样式。接收键盘事件或其他用户输入的元素都允许 :focus 选择器。<br><blockquote><pre><code><span>input:focus{ background-color:yellow; }</span></code></pre></blockquote><br><span style="color:red">他们的先后顺序，要让他们遵守一个爱恨原则LoVe/HAte,也就是Link–visited–hover–active。这样样式才能生效。</span><br>二、元素状态<br>1､ :enabled 为所有 type=”text” 的已启用的 input 元素设置其样式。:enabled 选择器匹配每个已启用的元素（大多用在表单元素上）。<br><blockquote><pre><code><span>input[type=”text”]:enabled{ background-color: #ff0000; }</span></code></pre></blockquote><br>2､ :disabled 为所有 type=”text” 的被禁用的 input 元素设置其样式。:disabled 选择器匹配每个被禁用的元素（大多用在表单元素上）。<br><blockquote><pre><code><span>input[type=”text”]:disabled{ background-color: #dddddd; }</span></code></pre></blockquote><br>3､ :checked 为所有被选中的 input 元素设置其样式。:checked 选择器匹配每个已被选中的 input 元素（只用于单选按钮和复选框）。<br><blockquote><pre><code><span>input:checked{ background-color: #ff0000; }</span></code></pre></blockquote><br>三、nth选择器<br>1､ :first-child 选择属于其父元素的首个子元素的每个 <p> 元素，并为其设置样式。:first-child 选择器用于选取属于其父元素的首个子元素的指定选择器。<br><blockquote><pre><code><span>p:first-child{ background-color:yellow; }</span></code></pre></blockquote><br>2､ :last-child 指定属于其父元素的最后一个子元素的 p 元素设置样式。:last-child 选择器匹配属于其父元素的最后一个子元素的每个元素。p:last-child 等同于 p:nth-last-child(1)。<br><blockquote><pre><code><span>p:last-child{ background:#ff0000; }</span></code></pre></blockquote><br>3､ :first-of-type 指定父元素的首个 p 元素的样式。:first-of-type 选择器匹配属于其父元素的特定类型的首个子元素的每个元素，等同于 :nth-of-type(1)。<br><blockquote><pre><code><span>p:first-of-type{ background:#ff0000; }</span></code></pre></blockquote><br>4､ :last-of-type 指定父元素的最后一个 p 元素的样式。:last-of-type 选择器匹配属于其父元素的特定类型的最后一个子元素的每个元素，等同于 :nth-last-of-type(1)。<br><blockquote><pre><code><span>p:last-of-type{ background:#ff0000; }</span></code></pre></blockquote><br>5､ :only-of-type 指定属于父元素的特定类型的唯一子元素的每个 p 元素的样式。:only-of-type 选择器匹配属于其父元素的特定类型的唯一子元素的每个元素。<br><blockquote><pre><code><span>p:only-of-type{ background:#ff0000; }</span></code></pre></blockquote><br>6､ :only-child 规定属于其父元素的唯一子元素的每个 p 元素的样式。:only-child 选择器匹配属于其父元素的唯一子元素的每个元素。<br><blockquote><pre><code><span>p:only-child{ background:#ff0000; } </span></code></pre></blockquote><br>7､ :nth-child(n) 规定属于其父元素的第 n 个子元素的每个 p 元素的样式。:nth-child(n) 选择器匹配属于其父元素的第 N 个子元素，不论元素的类型。n 可以是数字、关键词或公式。<br><blockquote><pre><code><span>p:nth-child(2){ background:#ff0000; }</span></code></pre></blockquote><br>8､ :nth-last-child(n) 规定属于其父元素的第 n 个子元素的每个 p 元素，从最后一个子元素开始计数。<br>:nth-last-child(n) 选择器匹配属于其元素的第 N 个子元素的每个元素，不论元素的类型，从最后一个子元素开始计数。n 可以是数字、关键词或公式。<br><blockquote><pre><code><span>p:nth-last-child(2){ background:#ff0000; }</span></code></pre></blockquote></p>
+        <p><span style="font-size:18px;font-weight:bold;">什么是节流</span><br>函数节流(throttle)：任务频繁触发的情况下，指定时间间隔内只会执行一次任务；<br><span style="font-size:18px;font-weight:bold;">应用场景：</span><br>鼠标不断点击触发，mousedown(单位时间内只触发一次)<br>监听滚动事件，比如是否滑到底部自动加载更多，用throttle来判断<br><span style="font-size:18px;font-weight:bold;">实现：</span></p>
+<blockquote><pre><code><br><span>  /<strong> </strong></span><br><span>   <em> @param {function} fun 调用函数 </em></span><br><span>    @param {number} delay 延迟调用时间 </span><br><span>   <em> @param {array} args 剩余参数 </em></span><br><span>  /</span><br><span>  const throttle = (fun, delay, …args) =&gt; {</span><br><span>    let last = null; </span><br><span>    return (…rest) =&gt; { </span><br><span>      const now = + new Date(); </span><br><span>      if (now - last &gt; delay) { </span><br><span>        fun.apply(null, […args, …rest]); </span><br><span>        last = now; </span><br><span>      } </span><br><span>    } </span><br><span>  }</span><br></code></pre></blockquote><br><span style="font-size:18px;font-weight:bold;">测试：</span><br><blockquote><pre><code><br><span>    var obj = { a: 1 };</span><br><span>    var num = 0; </span><br><span>    var throttleExample = throttle(function(…rest) { </span><br><span>      console.log(rest, this.a); </span><br><span>      num++; </span><br><span>    }.bind(obj), 1000); </span><br><span>    throttleExample(num); </span><br><span>    throttleExample(num); </span><br><span>    throttleExample(num); </span><br></code></pre></blockquote><br><span style="font-size:18px;font-weight:bold;">什么是防抖</span><br>函数防抖(debounce)：任务频繁触发的情况下，只有任务触发的间隔超过指定间隔的时候，任务才会执行。<br><span style="font-size:18px;font-weight:bold;">应用场景：</span><br>search搜索联想，用户在不断输入值时，用防抖来节约请求资源。<br>window触发resize的时候，不断的调整浏览器窗口大小会不断的触发这个事件，用防抖来让其只触发一次<br><blockquote><pre><code><br><span>  / </span><br><span>   <em> @param {function} fun 调用函数 </em></span><br><span>    @param {number} delay 延迟调用时间 </span><br><span>   <em> @param {array} args 剩余参数 </em></span><br><span>  /</span><br><span>  const debouce = (fun, delay, …args) =&gt; {</span><br><span>    let timer = null; </span><br><span>    return (…rest) =&gt; { </span><br><span>      clearTimeout(timer); </span><br><span>      timer = setTimeout(() =&gt; { </span><br><span>        fun.apply(null, […args, …rest]); </span><br><span>      }, delay); </span><br><span>    } </span><br><span>  }</span><br></code></pre></blockquote><br><blockquote><pre><code><br><span>    var obj = { a: 1 };</span><br><span>    var num = 0; </span><br><span>    var debouceExample = debouce(function(…rest) { </span><br><span>      console.log(rest, this.a); </span><br><span>      num++; </span><br><span>    }.bind(obj), 1000); </span><br><span>    debouceExample(num); </span><br><span>    debouceExample(num); </span><br><span>    debouceExample(num); </span><br></code></pre></blockquote>
       
     </div>
 
@@ -387,8 +387,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/21/selectors2/" rel="next" title="CSS3 属性选择器">
-                <i class="fa fa-chevron-left"></i> CSS3 属性选择器
+              <a href="/2019/05/15/poonHill/" rel="next" title="【尼泊尔】PoonHill徒步，等风来">
+                <i class="fa fa-chevron-left"></i> 【尼泊尔】PoonHill徒步，等风来
               </a>
             
           </div>
@@ -396,10 +396,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/28/bhd/" rel="prev" title="北海道—冰雪之旅">
-                北海道—冰雪之旅 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
