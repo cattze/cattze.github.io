@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="什么是节流函数节流(throttle)：任务频繁触发的情况下，指定时间间隔内只会执行一次任务；应用场景：鼠标不断点击触发，mousedown(单位时间内只触发一次)监听滚动事件，比如是否滑到底部自动加载更多，用throttle来判断实现：   /*     @param {function} fun 调用函数     @param {number} delay 延迟调用时间     @param">
+<meta name="description" content="什么是节流函数节流(throttle)：任务频繁触发的情况下，指定时间间隔内只会执行一次任务；应用场景：鼠标不断点击触发，mousedown(单位时间内只触发一次)监听滚动事件，比如是否滑到底部自动加载更多，用throttle来判断实现：   /     @param {function} fun 调用函数     @param {number} delay 延迟调用时间     @param {">
 <meta property="og:type" content="article">
 <meta property="og:title" content="节流和防抖函数">
 <meta property="og:url" content="https:socat.cc/2019/06/22/throttle/index.html">
 <meta property="og:site_name" content="socat">
-<meta property="og:description" content="什么是节流函数节流(throttle)：任务频繁触发的情况下，指定时间间隔内只会执行一次任务；应用场景：鼠标不断点击触发，mousedown(单位时间内只触发一次)监听滚动事件，比如是否滑到底部自动加载更多，用throttle来判断实现：   /*     @param {function} fun 调用函数     @param {number} delay 延迟调用时间     @param">
+<meta property="og:description" content="什么是节流函数节流(throttle)：任务频繁触发的情况下，指定时间间隔内只会执行一次任务；应用场景：鼠标不断点击触发，mousedown(单位时间内只触发一次)监听滚动事件，比如是否滑到底部自动加载更多，用throttle来判断实现：   /     @param {function} fun 调用函数     @param {number} delay 延迟调用时间     @param {">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-20T02:51:19.470Z">
+<meta property="og:updated_time" content="2020-03-20T02:53:25.361Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="节流和防抖函数">
-<meta name="twitter:description" content="什么是节流函数节流(throttle)：任务频繁触发的情况下，指定时间间隔内只会执行一次任务；应用场景：鼠标不断点击触发，mousedown(单位时间内只触发一次)监听滚动事件，比如是否滑到底部自动加载更多，用throttle来判断实现：   /*     @param {function} fun 调用函数     @param {number} delay 延迟调用时间     @param">
+<meta name="twitter:description" content="什么是节流函数节流(throttle)：任务频繁触发的情况下，指定时间间隔内只会执行一次任务；应用场景：鼠标不断点击触发，mousedown(单位时间内只触发一次)监听滚动事件，比如是否滑到底部自动加载更多，用throttle来判断实现：   /     @param {function} fun 调用函数     @param {number} delay 延迟调用时间     @param {">
 
 
 
@@ -351,14 +351,7 @@
 
       
         <p><span style="font-size:18px;font-weight:bold;">什么是节流</span><br>函数节流(throttle)：任务频繁触发的情况下，指定时间间隔内只会执行一次任务；<br><span style="font-size:18px;font-weight:bold;">应用场景：</span><br>鼠标不断点击触发，mousedown(单位时间内只触发一次)<br>监听滚动事件，比如是否滑到底部自动加载更多，用throttle来判断<br><span style="font-size:18px;font-weight:bold;">实现：</span></p>
-<p><blockquote><pre><code><br><span>  /<em>* </em></span><br><span>    @param {function} fun 调用函数 </span><br><span>   <em> @param {number} delay 延迟调用时间 </em></span><br><span>    @param {array} args 剩余参数 </span><br><span>  */</span><br><span>  const throttle = (fun, delay, …args) =&gt; {</span><br><span>    let last = null; </span><br><span>    return (…rest) =&gt; { </span><br><span>      const now = + new Date(); </span><br><span>      if (now - last &gt; delay) { </span><br><span>        fun.apply(null, […args, …rest]); </span><br><span>        last = now; </span><br><span>      } </span><br><span>    } </span><br><span>  }</span><br></code></pre></blockquote><br><span style="font-size:18px;font-weight:bold;">测试：</span></p>
-<p><blockquote><pre><code><br><span>    var obj = { a: 1 };</span><br><span>    var num = 0; </span><br><span>    var throttleExample = throttle(function(…rest) { </span><br><span>      console.log(rest, this.a); </span><br><span>      num++; </span><br><span>    }.bind(obj), 1000); </span><br><span>    throttleExample(num); </span><br><span>    throttleExample(num); </span><br><span>    throttleExample(num); </span><br></code></pre></blockquote><br><span style="font-size:18px;font-weight:bold;">什么是防抖</span><br>函数防抖(debounce)：任务频繁触发的情况下，只有任务触发的间隔超过指定间隔的时候，任务才会执行。<br><span style="font-size:18px;font-weight:bold;">应用场景：</span><br>search搜索联想，用户在不断输入值时，用防抖来节约请求资源。<br>window触发resize的时候，不断的调整浏览器窗口大小会不断的触发这个事件，用防抖来让其只触发一次</p>
-<p><blockquote><pre><code><br><span>  /<em>* </em></span><br><span>    @param {function} fun 调用函数 </span><br><span>   <em> @param {number} delay 延迟调用时间 </em></span><br><span>    @param {array} args 剩余参数 </span><br><span>  */</span><br><span>  const debouce = (fun, delay, …args) =&gt; {</span><br><span>    let timer = null; </span><br><span>    return (…rest) =&gt; { </span><br><span>      clearTimeout(timer); </span><br><span>      timer = setTimeout(() =&gt; { </span><br><span>        fun.apply(null, […args, …rest]); </span><br><span>      }, delay); </span><br><span>    } </span><br><span>  }</span><br></code></pre></blockquote></p>
-<p><blockquote><pre><code><br><span>    var obj = { a: 1 };</span><br><span>    var num = 0; </span><br><span>    var debouceExample = debouce(function(…rest) { </span><br><span>      console.log(rest, this.a); </span><br><span>      num++; </span><br><span>    }.bind(obj), 1000); </span><br><span>    debouceExample(num); </span><br><span>    debouceExample(num); </span><br><span>    debouceExample(num); </span></code></pre></blockquote></p>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>const getWindowHeight = () =&gt; {<br>  const {width,height} = window.screen;<br>  console.log(‘浏览器宽度为：’,width, ‘浏览器高度为:’, height);<br>}<br>// 计算窗口宽高的变化<br>const throttle = (fn) =&gt; {<br>  let timeNo;<br>  return () =&gt; {<br>      console.log(‘窗口变化’);<br>    if(timeNo) return;<br>    timeNo = setTimeout(() =&gt; {<br>      fn()<br>      clearTimeout(timeNo);<br>      timeNo = null;<br>    }, 200);<br>  }<br>}<br>// 监听窗口宽高变化<br>window.addEventListener(‘resize’, throttle(getWindowHeight))</p>
-<p>const input = document.querySelector(‘#input’); // 拿输入框对象<br>const debounce = () =&gt; {<br>  let timeNo;<br>  return (e) =&gt; {<br>    clearTimeout(timeNo);<br>    timeNo = setTimeout(() =&gt; {<br>      const {target: {value}} = e;<br>      console.log(‘输入框的值为’,value)<br>      clearTimeout(timeNo);<br>    },200)<br>  }<br>}<br>input.addEventListener(‘input’, debounce()); // 监听输入框的input事件</p>
-<hr>
-
+<blockquote><pre><code><br><span>  /<strong> </strong></span><br><span>   <em> @param {function} fun 调用函数 </em></span><br><span>    @param {number} delay 延迟调用时间 </span><br><span>   <em> @param {array} args 剩余参数 </em></span><br><span>  /</span><br><span>  const throttle = (fun, delay, …args) =&gt; {</span><br><span>    let last = null; </span><br><span>    return (…rest) =&gt; { </span><br><span>      const now = + new Date(); </span><br><span>      if (now - last &gt; delay) { </span><br><span>        fun.apply(null, […args, …rest]); </span><br><span>        last = now; </span><br><span>      } </span><br><span>    } </span><br><span>  }</span><br></code></pre></blockquote><br><span style="font-size:18px;font-weight:bold;">测试：</span><br><blockquote><pre><code><br><span>    var obj = { a: 1 };</span><br><span>    var num = 0; </span><br><span>    var throttleExample = throttle(function(…rest) { </span><br><span>      console.log(rest, this.a); </span><br><span>      num++; </span><br><span>    }.bind(obj), 1000); </span><br><span>    throttleExample(num); </span><br><span>    throttleExample(num); </span><br><span>    throttleExample(num); </span><br></code></pre></blockquote><br><span style="font-size:18px;font-weight:bold;">什么是防抖</span><br>函数防抖(debounce)：任务频繁触发的情况下，只有任务触发的间隔超过指定间隔的时候，任务才会执行。<br><span style="font-size:18px;font-weight:bold;">应用场景：</span><br>search搜索联想，用户在不断输入值时，用防抖来节约请求资源。<br>window触发resize的时候，不断的调整浏览器窗口大小会不断的触发这个事件，用防抖来让其只触发一次<br><blockquote><pre><code><br><span>  / </span><br><span>   <em> @param {function} fun 调用函数 </em></span><br><span>    @param {number} delay 延迟调用时间 </span><br><span>   <em> @param {array} args 剩余参数 </em></span><br><span>  /</span><br><span>  const debouce = (fun, delay, …args) =&gt; {</span><br><span>    let timer = null; </span><br><span>    return (…rest) =&gt; { </span><br><span>      clearTimeout(timer); </span><br><span>      timer = setTimeout(() =&gt; { </span><br><span>        fun.apply(null, […args, …rest]); </span><br><span>      }, delay); </span><br><span>    } </span><br><span>  }</span><br></code></pre></blockquote><br><blockquote><pre><code><br><span>    var obj = { a: 1 };</span><br><span>    var num = 0; </span><br><span>    var debouceExample = debouce(function(…rest) { </span><br><span>      console.log(rest, this.a); </span><br><span>      num++; </span><br><span>    }.bind(obj), 1000); </span><br><span>    debouceExample(num); </span><br><span>    debouceExample(num); </span><br><span>    debouceExample(num); </span><br></code></pre></blockquote>
       
     </div>
 
@@ -451,17 +444,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -514,22 +498,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
