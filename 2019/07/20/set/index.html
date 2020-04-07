@@ -87,19 +87,17 @@
 
 
 
-<meta name="description" content="controller应该纯粹地用来把service、依赖关系、以及其它对象串联到一起，然后通过scope把它们关联到view上。控制器并不适合用来执行DOM操作、格式化或数据操作、以及除存储数据模型之外的状态维护操作。它只是视图和$scope之间的桥梁。一个控制器不应该做太多的工作，它应该只包含单个视图的业务逻辑。将那些不属于控制器的工作抽离到服务中，然后通过依赖注入在控制器中使用这些服务。 An">
+<meta name="description" content="集合(Set)Set它类似于数组，只不过是没有排序概念的数组，并且具有元素不可重复的特性。创建Set本身是一个构造函数，用来生成Set数据结构。   let items = new Set() //无参数   let items = new Set([1,2,3,4,5,6]) //默认参数 向Set加入值的时候，不会发生类型转换。这意味着，在Set中5和“5”是两个不同的值。添加某个值  let">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AngularJS中controller控制器">
-<meta property="og:url" content="https:socat.cc/2016/07/01/controller/index.html">
+<meta property="og:title" content="ES6 Set和WeakSet数据结构">
+<meta property="og:url" content="https:socat.cc/2019/07/20/set/index.html">
 <meta property="og:site_name" content="socat">
-<meta property="og:description" content="controller应该纯粹地用来把service、依赖关系、以及其它对象串联到一起，然后通过scope把它们关联到view上。控制器并不适合用来执行DOM操作、格式化或数据操作、以及除存储数据模型之外的状态维护操作。它只是视图和$scope之间的桥梁。一个控制器不应该做太多的工作，它应该只包含单个视图的业务逻辑。将那些不属于控制器的工作抽离到服务中，然后通过依赖注入在控制器中使用这些服务。 An">
+<meta property="og:description" content="集合(Set)Set它类似于数组，只不过是没有排序概念的数组，并且具有元素不可重复的特性。创建Set本身是一个构造函数，用来生成Set数据结构。   let items = new Set() //无参数   let items = new Set([1,2,3,4,5,6]) //默认参数 向Set加入值的时候，不会发生类型转换。这意味着，在Set中5和“5”是两个不同的值。添加某个值  let">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oo6ltjdyl.bkt.clouddn.com/81A288.png">
-<meta property="og:updated_time" content="2017-06-23T02:53:41.000Z">
+<meta property="og:updated_time" content="2020-04-07T03:03:19.057Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AngularJS中controller控制器">
-<meta name="twitter:description" content="controller应该纯粹地用来把service、依赖关系、以及其它对象串联到一起，然后通过scope把它们关联到view上。控制器并不适合用来执行DOM操作、格式化或数据操作、以及除存储数据模型之外的状态维护操作。它只是视图和$scope之间的桥梁。一个控制器不应该做太多的工作，它应该只包含单个视图的业务逻辑。将那些不属于控制器的工作抽离到服务中，然后通过依赖注入在控制器中使用这些服务。 An">
-<meta name="twitter:image" content="http://oo6ltjdyl.bkt.clouddn.com/81A288.png">
+<meta name="twitter:title" content="ES6 Set和WeakSet数据结构">
+<meta name="twitter:description" content="集合(Set)Set它类似于数组，只不过是没有排序概念的数组，并且具有元素不可重复的特性。创建Set本身是一个构造函数，用来生成Set数据结构。   let items = new Set() //无参数   let items = new Set([1,2,3,4,5,6]) //默认参数 向Set加入值的时候，不会发生类型转换。这意味着，在Set中5和“5”是两个不同的值。添加某个值  let">
 
 
 
@@ -127,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https:socat.cc/2016/07/01/controller/"/>
+  <link rel="canonical" href="https:socat.cc/2019/07/20/set/"/>
 
 
 
 
 
-  <title> AngularJS中controller控制器 | socat </title>
+  <title> ES6 Set和WeakSet数据结构 | socat </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -258,7 +256,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https:socat.cc/2016/07/01/controller/">
+    <link itemprop="mainEntityOfPage" href="https:socat.cc/2019/07/20/set/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="socat">
@@ -279,7 +277,7 @@
             
             
               
-                AngularJS中controller控制器
+                ES6 Set和WeakSet数据结构
               
             
           </h1>
@@ -294,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-07-01T00:00:00+08:00">
-                2016-07-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-20T00:00:00+08:00">
+                2019-07-20
               </time>
             
 
@@ -317,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/AngularJs/" itemprop="url" rel="index">
-                    <span itemprop="name">AngularJs</span>
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
                   </a>
                 </span>
 
@@ -352,11 +350,8 @@
       
 
       
-        <p>controller应该纯粹地用来把service、依赖关系、以及其它对象串联到一起，然后通过scope把它们关联到view上。<br>控制器并不适合用来执行DOM操作、格式化或数据操作、以及除存储数据模型之外的状态维护操作。它只是视图和$scope之间的桥梁。<br>一个控制器不应该做太多的工作，它应该只包含单个视图的业务逻辑。<br>将那些不属于控制器的工作抽离到服务中，然后通过依赖注入在控制器中使用这些服务。<br><img src="http://oo6ltjdyl.bkt.clouddn.com/81A288.png" alt=""></p>
-<p>AngularJS中的控制器继承是基于作用域的继承的。</p>
-<p><blockquote><pre><code><span>HTML</span><br><span>&lt;div ng-controller=”MainCtrl”&gt;</span><br>  <span>&lt;p&gt;</span><span> Good {{timeOfDay}}, {{name}}!</span><span>&lt;/p&gt;</span><br>  <span>&lt;div ng-controller=”ChildCtrl”&gt;</span><br>  <span>&lt;p&gt;</span><span>Good {{timeOfDay}}, {{name}}!</span><span>&lt;/p&gt;</span><br>  <span>&lt;p ng-controller=”BabyCtrl”&gt;</span><span>Good {{timeOfDay}}, {{name}}!</span><span>&lt;/p&gt;</span><br><span>&lt;/div&gt;</span></code></pre></blockquote></p>
-<p><blockquote><pre><code><span>JavaScript</span><br>  <span>function MainCtrl($scope) {</span><br>    <span>$scope.timeOfDay = ‘morning’;</span><br>    <span>$scope.name = ‘Nikki’;</span><br>  <span>}</span><br>  <span>function ChildCtrl($scope) {</span><br>    <span>$scope.name = ‘Mattie’;</span><br>  <span>}</span><br>  <span>function BabyCtrl($scope) {</span><br>    <span>$scope.timeOfDay = ‘evening’;</span><br>    <span>$scope.name = ‘Gingerbreak Baby’;</span><br>  <span>}</span><br></code></pre></blockquote><br>这个模板结构使得AngularJS为视图创建四个作用域。<br>1､ MainCtrl作用域，它包含了模型timeOfDay和模型name。<br>2､ ChildCtrl作用域，它继承了上层作用域的timeOfDay，复写了name。<br>3､ BabyCtrl作用域，复写了MainCtrl中定义的timeOfDay和ChildCtrl中的name。</p>
-
+        <p><span style="font-size:18px;font-weight:bold;color:red">集合(Set)</span><br>Set它类似于数组，只不过是没有排序概念的数组，并且具有元素不可重复的特性。<br><span style="font-size:18px;font-weight:bold;">创建</span><br>Set本身是一个构造函数，用来生成Set数据结构。</p>
+<blockquote><pre><code><br><span>  let items = new Set() //无参数 </span><br><span>  let items = new Set([1,2,3,4,5,6]) //默认参数 </span><br></code></pre></blockquote><br>向Set加入值的时候，不会发生类型转换。这意味着，在Set中5和“5”是两个不同的值。<br><span style="font-size:18px;font-weight:bold;">添加某个值</span><br><blockquote><pre><code><br><span>  let setArr = new Set([‘socat’, ‘web’, ‘web’]) </span><br><span>  setArr.add(‘travel’).add(‘travel’) </span><br><span>  console.log(setArr) //{“socat”, “web”, “travel”} </span><br></code></pre></blockquote><br><span style="font-size:18px;font-weight:bold;">删除某个值</span><br><blockquote><pre><code><br><span>  setArr.delete(‘web’) //{“socat”, “travel”}  </span><br></code></pre></blockquote><br><span style="font-size:18px;font-weight:bold;">返回Set的成员总数</span><br><blockquote><pre><code><br><span>  setArr.size() // 2  </span><br></code></pre></blockquote><br><span style="font-size:18px;font-weight:bold;">检查集合内是否含有某元素</span><br><blockquote><pre><code><br><span>  setArr.has(‘socat’)  // true </span><br></code></pre></blockquote><br><span style="font-size:18px;font-weight:bold;">清除所有成员</span><br><blockquote><pre><code><br><span>  setArr.clear();  </span><br></code></pre></blockquote><br><span style="font-size:18px;font-weight:bold;">循环</span><br><blockquote><pre><code><br><span>  for…of…循环：  </span><br><span>  for(let item of setArr){  </span><br><span>    console.log(item) </span><br><span>  }  </span><br><span>  forEach循环：  </span><br><span>  setArr.forEach( val =&gt;  console.log(val))  </span><br></code></pre></blockquote><br><span style="font-size:18px;font-weight:bold;">将Set转换为数组</span><br><blockquote><pre><code><br><span>  let items = new Set([1,2,3,4,5]) </span><br><span>  let array = Array.from(items) </span><br><span>  console.log(array) //[1,2,3,4,5]</span><br></code></pre></blockquote><br><span style="font-size:18px;font-weight:bold;color:red">弱集合(WeakSet)</span><br>WeakSet 结构与 Set 类似，但只有add、delete、has三个方法，WeakSet的成员只能是对象，并且WeakSet不支持clear方法，不支持遍历，也没有forEach这个方法，没有属性size。<br><blockquote><pre><code><br><span>  let weakObj = new WeakSet() //直接在new 的时候就放入值，将报错 </span><br><span>  let obj = { name: ‘socat’, skill: ‘web’} </span><br><span>  weakObj.add(obj); </span><br><span>  console.log(weakObj) </span><br></code></pre></blockquote>
       
     </div>
 
@@ -392,8 +387,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/16/array/" rel="next" title="JavaScript Array 对象">
-                <i class="fa fa-chevron-left"></i> JavaScript Array 对象
+              <a href="/2019/06/22/throttle/" rel="next" title="节流和防抖函数">
+                <i class="fa fa-chevron-left"></i> 节流和防抖函数
               </a>
             
           </div>
@@ -401,10 +396,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/15/module/" rel="prev" title="AngularJS中module模块">
-                AngularJS中module模块 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
